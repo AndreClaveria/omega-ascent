@@ -1,0 +1,34 @@
+@import '../../../styles/variable.scss';
+
+.h1 {
+  font-family: $first_font;
+  color: $first_color;
+  &_white {
+    color: $white_color;
+  }
+  &_light {
+    color: $second_color;
+  }
+}
+.h2 {
+  font-family: $first_font;
+  color: $first_color;
+  &_white {
+    color: $white_color;
+  }
+  &_light {
+    color: $second_color;
+  }
+}
+.medium {
+  font-size: $medium_font_size;
+  margin: 2px;
+}
+.big {
+  font-size: $big_font_size;
+  margin: 2px;
+}
+.title {
+  font-size: $title_font_size;
+  margin: 2px;
+}
