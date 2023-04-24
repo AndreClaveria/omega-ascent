@@ -15,13 +15,13 @@ Le but de ce projet est de faire un **"Site Web"** de présentation d'une fausse
 Site Web avec pas mal d'animations
 
 ## Fonctionnalité attendu pour le 20/05
-- 3D
-- Page Home
-- Page Loading
-- Page About
-- Page sur les cryptos => (API)
-- Page Achat
-- ...
+- Background en 3D peut être avec des intéractions
+- Page Home de présentation de la fausse crypto
+- Loader le temps de charger tout
+- Page About pour présenter l'équipe
+- Call API sur le cours des crypto pour voir le cours des crypto
+- Page Achat pour faire semblant d'acheter
+- (non définis) ...
 
 ## Stratégie pour le CI/CD
 

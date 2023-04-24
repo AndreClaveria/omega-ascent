@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './index.module.scss';
-import Title from '@/components/UI/Title';
 
 const Index = (props) => {
   return (

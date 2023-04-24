@@ -14,12 +14,11 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
+  // height: 100vh;
   background-color: black;
   letter-spacing: $letter_spacing;
 }
 #__next {
-  height: 100%;
   width: 100%;
 }
 .p {
@@ -32,6 +31,9 @@ body {
   &_medium {
     font-size: $medium_font_size;
   }
+  &_big{
+    font-size: $big_font_size;
+  }
 }
 .span {
   color: $first_color;
@@ -43,6 +45,9 @@ body {
   &_medium {
     font-size: $medium_font_size;
   }
+  &_big{
+    font-size: $big_font_size;
+  }
   &_light_small {
     color: $second_color;
     font-size: $small_font_size;
@@ -50,5 +55,9 @@ body {
   &_light_medium {
     color: $second_color;
     font-size: $medium_font_size;
+  }
+  &_light_big{
+    color: $second_color;
+    font-size: $big_font_size;
   }
 }
