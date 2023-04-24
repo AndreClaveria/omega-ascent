@@ -6,9 +6,34 @@
 
 --------------------------
 
-## BUT :raised_eyebrow:
+## BUT | Informations générales :raised_eyebrow:
 
-Le but de ce projet est de faire un **"Site Web"** de présentation d'une fausse crypto monnaie pour pouvoir faire un beau site futuriste.
+Le but de ce projet est de faire un **"Site Web"** de présentation d'une fausse crypto monnaie (Omega Ascent) pour pouvoir faire un beau site futuriste.
+
+## Type de produits à développer
+
+Site Web avec pas mal d'animations
+
+## Fonctionnalité attendu pour le 20/05
+- 3D
+- Page Home
+- Page Loading
+- Page About
+- Page sur les cryptos => (API)
+- Page Achat
+- ...
+
+## Stratégie pour le CI/CD
+
+La stratégie pour le CI/CD est la suivante :
+
+- Test
+- Si marche
+- Push
+
+## Repartition des tâches 
+
+- CF Trello 
 
 --------------------------
 
