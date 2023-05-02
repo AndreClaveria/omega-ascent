@@ -4,20 +4,10 @@ const Index = () => {
   return (
     <>
       <div className={styles.middle}>
-        <Button
-          title="LAUNCH"
-          btn="btn"
-          className="btn__primary"
-          type="button"
-        />
+        <Button title="LAUNCH" className="btn__primary" type="button" />
       </div>
       <div className={styles.middle}>
-        <Button
-          title="COURSE"
-          btn="btn"
-          className="btn__secondary"
-          type="button"
-        />
+        <Button title="COURSE" className="btn__secondary" type="button" />
       </div>
     </>
   );
