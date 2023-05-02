@@ -1,10 +1,11 @@
 import React from 'react';
 import style from './index.module.scss';
+import Image from 'next/image';
 
 const Index = (props) => {
   return (
     <div className={style.img_cont}>
-      <img
+      <Image
         src={props.src}
         className={style.img}
         width={props.width}
