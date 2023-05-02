@@ -1,55 +1,51 @@
 @import '../../../styles/variable.scss';
 
 .btn {
-  border-radius: 20px;
-}
-
-.btn {
   display: inline-block;
-
-  font-size: 18px;
+  border-radius: $border_radius;
+  font-size: $medium_font_size;
   font-weight: 400;
   padding: 28px 40px 28px;
   font-family: $first_font;
 
   cursor: pointer;
-  transition: 0.3s all;
+  transition: $transition all;
   &__primary {
     background-color: transparent;
     color: $white_color;
-    border-left: 11px solid $first_color;
-    border-right: 11px solid $first_color;
+    border-left: 10px solid $first_color;
+    border-right: 10px solid $first_color;
     border-top: none;
     border-bottom: none;
-    transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow $transition ease-in-out;
     &:hover {
-      background: $first_color_darker;
+      background: rgba($color: $first_color, $alpha: 0.8);
       border-left: 10px solid $first_color;
       border-right: 10px solid $first_color;
       border-top: none;
       border-bottom: none;
       color: $white_color;
-      box-shadow: 0 0 75px $first_color_darker;
-      text-shadow: 0 0 75px $white_color;
+      box-shadow: 0 0 80px $first_color;
+      text-shadow: 0 0 80px $white_color;
     }
   }
   &__secondary {
     background-color: transparent;
     color: $white_color;
-    border-left: 11px solid $second_color;
-    border-right: 11px solid $second_color;
+    border-left: 10px solid $second_color;
+    border-right: 10px solid $second_color;
     border-top: none;
     border-bottom: none;
-    transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow $transition ease-in-out;
     &:hover {
-      background: $second_color_darker;
+      background: rgba($color: $second_color, $alpha: 0.8);
       border-left: 10px solid $second_color;
       border-right: 10px solid $second_color;
       border-top: none;
       border-bottom: none;
       color: $white_color;
-      box-shadow: 0 0 75px $second_color_darker;
-      text-shadow: 0 0 75px $white_color;
+      box-shadow: 0 0 80px $second_color;
+      text-shadow: 0 0 80px $white_color;
     }
   }
 }
