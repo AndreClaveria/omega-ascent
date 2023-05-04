@@ -1,0 +1,49 @@
+@import '../../../styles/variable.scss';
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    background-color: $second_color;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: $border_radius;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__close {
+    width: 100px;
+    height: 100%;
+    background-color: $first_color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__closing {
+    background-color: $first_color;
+    color: $white_color;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
