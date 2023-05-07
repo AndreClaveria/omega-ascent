@@ -1,7 +1,13 @@
-@import '../../../styles/variable.scss';
+@import '@/styles/variable.scss';
+
+// ------------------------------+
+//
+//            LOGO
+//
+// ------------------------------+
 
 .img_cont {
-  margin: 10px;
+  margin: $small_margin;
   display: flex;
   align-items: center;
   justify-content: center;

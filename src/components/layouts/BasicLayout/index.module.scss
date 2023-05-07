@@ -2,14 +2,13 @@
 
 // ------------------------------+
 //
-//          MAIN LAYOUT
+//          BASIC LAYOUT
 //
 // ------------------------------+
 
 .global_cont {
   width: 100vw;
   height: 100vh;
-  background-color: darkblue;
+  background-color: $black_color;
   overflow: hidden;
-  position: relative;
 }

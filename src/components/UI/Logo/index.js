@@ -7,7 +7,7 @@ const Index = (props) => {
     <div className={style.img_cont}>
       <Image
         src={props.src}
-        className={style.img}
+        className={`${style.img} ${props.className}`}
         width={props.width}
         alt={props.alt}
       />

@@ -1,0 +1,99 @@
+@import '@/styles/variable.scss';
+
+// ------------------------------+
+//
+//          HEADER
+//
+// ------------------------------+
+#navbar {
+  pointer-events: auto;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  &::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0) 15%,
+      $black_color 250%
+    );
+  }
+  .nav_cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    position: relative;
+    .nav_bar_logo {
+      width: 280px;
+      position: relative;
+      .logo_a,
+      .logo_o {
+        position: absolute;
+        bottom: 0;
+      }
+      .logo_o {
+        transition: $transition_logo_nav_bar all;
+        left: 10px;
+      }
+      .logo_a {
+        transition: $transition_logo_nav_bar all;
+        left: 0px;
+        opacity: 1;
+      }
+      .letters {
+        transition: $transition_logo_nav_bar all;
+        position: absolute;
+        bottom: 0;
+        right: -20px;
+        opacity: 0;
+      }
+      &:hover {
+        .letters {
+          opacity: 1;
+          right: 0px;
+        }
+        .logo_o {
+          left: 0px;
+          transform: rotateY(180deg);
+          transform: rotateX(360deg);
+        }
+        .logo_a {
+          left: 124px;
+          opacity: 1;
+          transform: rotateY(180deg);
+          transform: rotateX(360deg);
+        }
+      }
+    }
+    .nav_bar_link_cont {
+      //   position: absolute;
+      //   overflow: hidden;
+      //   left: 50%;
+      //   transform: translate(-50%);
+      .nav_bar_link {
+        // display: flex;
+        // gap: min(3vw, 55px);
+        .link_item {
+          //   cursor: pointer;
+        }
+      }
+    }
+    .nav_bar_button {
+      display: flex;
+      gap: 1.5rem;
+    }
+  }
+}

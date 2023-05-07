@@ -1,13 +1,14 @@
-import styles from './index.module.scss';
+import React from 'react';
+import style from './index.module.scss';
 
-const Index = ({ type, title, handleClick, className }) => {
+const Index = (props) => {
   return (
     <button
-      type={type}
-      onClick={handleClick}
-      className={`${styles.btn} ${styles[className]}`}
+      type={props.type}
+      onClick={props.handleClick}
+      className={`${style.btn} ${style[props.className]}`}
     >
-      {title}
+      {props.title}
     </button>
   );
 };

@@ -2,14 +2,14 @@
 
 // ------------------------------+
 //
-//          MAIN LAYOUT
+//          HOME LAYOUT
 //
 // ------------------------------+
 
 .global_cont {
   width: 100vw;
-  height: 100vh;
-  background-color: darkblue;
-  overflow: hidden;
+  min-height: 100vh;
+  // background-color: $black_color;
+  overflow-x: hidden;
   position: relative;
 }

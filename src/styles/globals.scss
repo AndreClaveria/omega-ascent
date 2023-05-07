@@ -1,5 +1,11 @@
 @import '../styles/variable.scss';
 
+// ------------------------------+
+//
+//            FONT
+//
+// ------------------------------+
+
 @font-face {
   font-family: 'Quantum';
   src: url('../../public/font/quantum.otf');
@@ -10,6 +16,12 @@
   src: url('../../public/font/Orbitron.ttf');
 }
 
+// ------------------------------+
+//
+//            GLOBAL
+//
+// ------------------------------+
+
 * {
   box-sizing: unset;
 }
@@ -18,18 +30,19 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  width: 100vw;
-  // height: 100vh;
-  background-color: black;
   letter-spacing: $letter_spacing;
 }
-#__next {
-  width: 100%;
-}
+
+// ------------------------------+
+//
+//            TEXT
+//
+// ------------------------------+
+
 .p {
   color: $white_color;
   font-size: $font_size;
-  font-family: $first_font;
+  font-family: $second_font;
   &_small {
     font-size: $small_font_size;
   }
@@ -43,7 +56,7 @@ body {
 .span {
   color: $first_color;
   font-size: $font_size;
-  font-family: $first_font;
+  font-family: $second_font;
   &_small {
     font-size: $small_font_size;
   }
@@ -65,4 +78,37 @@ body {
     color: $second_color;
     font-size: $big_font_size;
   }
+}
+
+// ------------------------------+
+//
+//          SELECTION
+//
+// ------------------------------+
+
+
+*::selection {
+  background-color: $white_color;
+  color: $black_color;
+}
+
+*::-moz-selection {
+  background-color: $white_color;
+  color: $black_color;
+}
+
+// ------------------------------+
+//
+//            SCROLL
+//
+// ------------------------------+
+
+*::-webkit-scrollbar {
+  width: $big_border_width;
+  height: $big_border_width;
+  background-color: $black_color;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $first_color;
 }
