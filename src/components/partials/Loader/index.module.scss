@@ -1,0 +1,54 @@
+@import '@/styles/variable.scss';
+
+// ------------------------------+
+//
+//          LOADER
+//
+// ------------------------------+
+
+.section_loader_container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .section_loader {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid $border_width $first_color;
+    position: relative;
+    span {
+      position: absolute;
+      bottom: 2%;
+      right: 0;
+    }
+  }
+  .loader {
+    position: relative;
+    height: 520px;
+    width: 600px;
+    .img_not_fill {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 1;
+    }
+    .img_fill_cont {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 1;
+      width: 100%;
+      overflow: hidden;
+      .img_fill {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+      }
+    }
+  }
+}

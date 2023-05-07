@@ -1,34 +1,37 @@
-@import "../variable.scss";
+@import '../variable.scss';
 
 // ------------------------------+
 //
-//          LOADER
+//         PREVENTION PAGE
 //
 // ------------------------------+
-.section_loader_container{
-    height: 100vh;
-    width: 100%;
+
+.prevention_cont {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .prevention {
+    height: 90%;
+    width: 90%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    .section_loader{
-        height: 90%;
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-bottom: solid $border_width $first_color;
-        position: relative;
-        span{
-            position: absolute;
-            bottom: 2%;
-            right: 0;
-        }
+    align-items: center;
+    border-left: solid $big_border_width $first_color;
+    border-right: solid $big_border_width $first_color;
+    border-radius: $big_border_radius;
+    .prevention_img {
+      margin-bottom: $big_margin;
     }
-    .loader{
-        .loader_img{
-            width: 600px;
-        }
+    .text_cont {
+      margin-top: $big_margin;
+      text-align: center;
+      width: 40%;
     }
+    button {
+      margin-top: $big_margin;
+    }
+  }
 }
-

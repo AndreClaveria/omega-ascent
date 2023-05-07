@@ -1,49 +1,42 @@
-@import '../../../styles/variable.scss';
+@import '@/styles/variable.scss';
+
+// ------------------------------+
+//
+//           BUTTON
+//
+// ------------------------------+
 
 .btn {
   display: inline-block;
-  border-radius: $border_radius;
   font-size: $medium_font_size;
-  font-weight: 400;
-  padding: 28px 40px 28px;
-  font-family: $first_font;
-
-  cursor: pointer;
+  letter-spacing: $letter_spacing;
+  border-radius: $big_border_radius;
+  font-weight: 600;
+  padding: 16px 16px;
+  font-family: $second_font;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
   transition: $transition all;
-  &__primary {
-    background-color: transparent;
-    color: $white_color;
-    border-left: 10px solid $first_color;
-    border-right: 10px solid $first_color;
-    border-top: none;
-    border-bottom: none;
-    transition: box-shadow $transition ease-in-out;
+  cursor: pointer;
+  border-top: none;
+  border-bottom: none;
+  background-color: transparent;
+  color: $white_color;
+  &_primary {
+    border-left: $big_border_width solid $first_color;
+    border-right: $big_border_width solid $first_color;
     &:hover {
       background: rgba($color: $first_color, $alpha: 0.8);
-      border-left: 10px solid $first_color;
-      border-right: 10px solid $first_color;
-      border-top: none;
-      border-bottom: none;
-      color: $white_color;
       box-shadow: 0 0 80px $first_color;
       text-shadow: 0 0 80px $white_color;
     }
   }
-  &__secondary {
-    background-color: transparent;
-    color: $white_color;
-    border-left: 10px solid $second_color;
-    border-right: 10px solid $second_color;
-    border-top: none;
-    border-bottom: none;
-    transition: box-shadow $transition ease-in-out;
+  &_secondary {
+    border-left: $big_border_width solid $second_color;
+    border-right: $big_border_width solid $second_color;
     &:hover {
       background: rgba($color: $second_color, $alpha: 0.8);
-      border-left: 10px solid $second_color;
-      border-right: 10px solid $second_color;
-      border-top: none;
-      border-bottom: none;
-      color: $white_color;
       box-shadow: 0 0 80px $second_color;
       text-shadow: 0 0 80px $white_color;
     }
