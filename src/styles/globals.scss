@@ -66,6 +66,9 @@ body {
   &_big {
     font-size: $big_font_size;
   }
+  &_light {
+    color: $second_color;
+  }
   &_light_small {
     color: $second_color;
     font-size: $small_font_size;

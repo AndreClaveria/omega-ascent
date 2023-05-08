@@ -1,0 +1,74 @@
+@import '@/styles/variable.scss';
+
+// ------------------------------+
+//
+//          MODAL
+//
+// ------------------------------+
+
+.modal_page {
+  transition: all $transition_long ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba($color: $black_color, $alpha: 0);
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  .modal_cont {
+    position: fixed;
+    top: 2%;
+    right: -100%;
+    height: 96%;
+    width: 75%;
+    background-color: $first_color;
+    border-radius: $border_radius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all $transition_long ease-in-out;
+    .left_modal {
+      width: 8%;
+      height: 96%;
+      background-color: transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .close_modal {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: $border_radius;
+        background: rgba($color: $black_color, $alpha: 0.4);
+        cursor: pointer;
+      }
+      .social_network {
+        border-radius: $border_radius;
+        width: 100%;
+        height: 60%;
+      }
+    }
+    .right_modal {
+      width: 92%;
+      height: 100%;
+      border-radius: $border_radius;
+      background-color: $second_color;
+    }
+  }
+}
+
+// ------------------------------+
+//
+//          ANIMATION
+//
+// ------------------------------+
+
+.modal_page {
+  background: rgba($color: $black_color, $alpha: 0.8);
+  .modal_cont {
+    right: 0;
+  }
+}

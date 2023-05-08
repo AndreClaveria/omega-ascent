@@ -10,6 +10,7 @@
   width: 100vw;
   min-height: 100vh;
   // background-color: $black_color;
+  background: rgba($color: $black_color, $alpha: 0.8);
   overflow-x: hidden;
   position: relative;
 }

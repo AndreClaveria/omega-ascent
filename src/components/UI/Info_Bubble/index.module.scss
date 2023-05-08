@@ -1,0 +1,74 @@
+@import '@/styles/variable.scss';
+
+// ------------------------------+
+//
+//         LAYOUT BOT
+//
+// ------------------------------+
+
+.layout_single_bot{
+  justify-content: flex-end;
+}
+.layout_bot {
+  justify-content: space-between;
+}
+.layout_single_bot,
+.layout_bot {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: $margin;
+  left: 0;
+  .down_cont {
+    margin-left: $big_margin;
+    display: flex;
+    align-items: center;
+    gap: $margin;
+    .down_left {
+      background: $white_color;
+      border-radius: $small_border_radius;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 56px;
+      height: 56px;
+      cursor: pointer;
+      opacity: 1;
+      p {
+        color: $black_color;
+      }
+    }
+    // .down_right {
+
+    // }
+  }
+  .bubble_cont {
+    margin-right: $big_margin;
+    display: flex;
+    flex-direction: column;
+    padding: $margin;
+    background: rgba($color: $black_color, $alpha: 0.4);
+    border-radius: $border_radius;
+    cursor: pointer;
+    .bubble_top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .bubble_bot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &:hover {
+        background: rgba($color: $white_color, $alpha: 0.8);
+      p {
+        color: $black_color;
+      }
+      span {
+        color: $first_color;
+      }
+    }
+  }
+}

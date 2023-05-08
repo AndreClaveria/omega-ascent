@@ -5,7 +5,7 @@ import style from './index.module.scss';
 const Index = () => {
 
   return (
-    <div className={style.about_page}>
+    <div className={style.buy_page}>
 
     </div>
   );
