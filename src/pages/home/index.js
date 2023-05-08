@@ -5,7 +5,7 @@ import Loader from '@/components/partials/Loader'
 import Title from '@/components/UI/Title';
 
 export default function Home() {
-  const [isLoading, setLoader] = useState(false);
+  const [isLoading, setLoader] = useState(true);
   return (
     <>
       {isLoading ? (

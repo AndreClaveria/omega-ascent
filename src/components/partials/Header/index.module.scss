@@ -5,7 +5,8 @@
 //          HEADER
 //
 // ------------------------------+
-#navbar {
+
+.navbar {
   pointer-events: auto;
   position: absolute;
   width: 100%;
@@ -14,21 +15,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  &::before {
-    pointer-events: none;
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0;
-    height: 100px;
-    width: 100%;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0) 15%,
-      $black_color 250%
-    );
-  }
   .nav_cont {
     display: flex;
     justify-content: space-between;
@@ -60,6 +46,116 @@
         right: -20px;
         opacity: 0;
       }
+    }
+    .nav_bar_link_cont {
+      position: absolute;
+      overflow: hidden;
+      left: 50%;
+      transform: translate(-50%);
+      .nav_bar_ul {
+        display: flex;
+        gap: min(3vw, 55px);
+        list-style: none;
+        .nav_bar_li {
+          cursor: pointer;
+          .span_link {
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 16px 0;
+            .link {
+              position: relative;
+              overflow: hidden;
+              height: 20px;
+              display: flex;
+              align-items: center;
+              p {
+                display: inline-block;
+                margin-left: $small_margin;
+
+                &:nth-child(1) {
+                  transform-origin: top;
+                  transition: transform $transition_long ease-in-out;
+                }
+                &:nth-child(2) {
+                  transform: translate3d(0, 150%, 0);
+                  position: absolute;
+                  width: 100%;
+                  text-align: right;
+                  right: 0;
+                  opacity: 1;
+                  transition: all $transition_long ease-in-out;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .nav_bar_button {
+      display: flex;
+      gap: 1.5rem;
+    }
+  }
+}
+
+// ------------------------------+
+//
+//        BEFORE / AFTER
+//
+// ------------------------------+
+
+.navbar {
+  &::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0) 15%,
+      $black_color 250%
+    );
+  }
+}
+.navbar {
+  .nav_cont {
+    .nav_bar_link_cont {
+      .nav_bar_ul {
+        .nav_bar_li {
+          .span_link {
+            &:before {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              opacity: 1;
+              width: 100%;
+              height: $border_width;
+              background-color: $white_color;
+              transform: translateX(-102%);
+              transition: transform $transition_long ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ------------------------------+
+//
+//          HOVER / ACTIVE
+//
+// ------------------------------+
+
+.navbar {
+  .nav_cont {
+    .nav_bar_logo {
       &:hover {
         .letters {
           opacity: 1;
@@ -78,22 +174,28 @@
         }
       }
     }
+  }
+}
+
+.navbar {
+  .nav_cont {
     .nav_bar_link_cont {
-      //   position: absolute;
-      //   overflow: hidden;
-      //   left: 50%;
-      //   transform: translate(-50%);
-      .nav_bar_link {
-        // display: flex;
-        // gap: min(3vw, 55px);
-        .link_item {
-          //   cursor: pointer;
+      .nav_bar_ul {
+        .nav_bar_li {
+          .span_link {
+            &:hover:before {
+              transform: translateX(0%);
+            }
+            &:hover p:nth-child(1) {
+              transform: translateY(-100%);
+            }
+            &:hover p:nth-child(2) {
+              opacity: 1;
+              transform: translate3d(0, 0, 0);
+            }
+          }
         }
       }
-    }
-    .nav_bar_button {
-      display: flex;
-      gap: 1.5rem;
     }
   }
 }
