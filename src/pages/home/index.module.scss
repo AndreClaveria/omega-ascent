@@ -6,6 +6,13 @@
 //
 // ------------------------------+
 
+.home_cont_third,
+.home_cont_secondary,
 .home_cont{
   width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
 }

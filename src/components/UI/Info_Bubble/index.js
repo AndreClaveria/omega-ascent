@@ -7,7 +7,7 @@ const Index = (props) => {
   const isHome = router.pathname === '/home';
   const layoutBotClass = isHome ? style.layout_bot : style.layout_single_bot;
   return (
-    <div className={layoutBotClass} onClick={props.handleClick}>
+    <div className={layoutBotClass}>
       {isHome && (
         <div className={style.down_cont}>
           <div className={style.down_left}>
@@ -18,7 +18,7 @@ const Index = (props) => {
           </div>
         </div>
       )}
-      <div className={style.bubble_cont}>
+      <div className={style.bubble_cont} onClick={props.handleClick}>
         <div className={style.bubble_top}>
           <p className="p">Omega Ascent</p>
           <p className="p">-</p>

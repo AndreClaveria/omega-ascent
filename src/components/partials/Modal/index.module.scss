@@ -18,9 +18,10 @@
   .modal_cont {
     position: fixed;
     top: 2%;
-    right: -100%;
+    right: 0;
     height: 96%;
     width: 75%;
+    transform: translateX(100%);
     background-color: $first_color;
     border-radius: $border_radius;
     display: flex;
@@ -67,8 +68,12 @@
 // ------------------------------+
 
 .modal_page {
-  background: rgba($color: $black_color, $alpha: 0.8);
+  &.open {
+    background: rgba($color: $black_color, $alpha: 0.8);
+  }
   .modal_cont {
-    right: 0;
+    &.open {
+      transform: translateX(0);
+    }
   }
 }

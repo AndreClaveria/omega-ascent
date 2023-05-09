@@ -8,7 +8,7 @@ import Logo_A from 'p/img/ascent_logo.svg';
 
 import Image from '@/components/UI/Logo';
 import Button from '@/components/UI/Button';
-import Bubble from '@/components/UI/Info_Bubble'
+import Bubble from '@/components/UI/Info_Bubble';
 import Modal from '@/components/partials/Modal';
 
 const Index = () => {
@@ -16,18 +16,29 @@ const Index = () => {
 
   const [modalOpen, setModalOpen] = useState(false);
 
+  const [link, setLink] = useState(router.pathname);
+
   function handleOpenModal() {
     setModalOpen(true);
   }
 
   function handleOpenBuyWindow() {
-    router.push("/buy")
+    router.push('/buy');
   }
   function handleOpenAboutWindow() {
-    router.push("/about")
+    router.push('/about');
   }
   function handleOpenHomeWindow() {
-    router.push("/home")
+    setLink("/home")
+    router.push('/home');
+  }
+  function handleOpenHomeWindowSection1() {
+    setLink("/home#section1")
+    router.push('/home#section1');
+  }
+  function handleOpenHomeWindowSection2() {
+    setLink("/home#section2")
+    router.push('/home#section2');
   }
   return (
     <>
@@ -55,8 +66,16 @@ const Index = () => {
           </div>
           <div className={style.nav_bar_link_cont}>
             <ul className={style.nav_bar_ul}>
-              <li id={style.intro_link} className={style.nav_bar_li} onClick={handleOpenHomeWindow}>
-                <div className={style.span_link}>
+              <li
+                id="intro_link"
+                className={style.nav_bar_li}
+                onClick={handleOpenHomeWindow}
+              >
+                <div
+                  className={`${style.span_link} ${
+                    link === "/home" ? style.active : ''
+                  }`}
+                >
                   <span className="span span_light_small">01</span>
                   <div className={style.link}>
                     <p className="p">Intro</p>
@@ -64,8 +83,12 @@ const Index = () => {
                   </div>
                 </div>
               </li>
-              <li id="idea_link" className={style.nav_bar_li}>
-                <div className={style.span_link}>
+              <li id="section1_link" className={style.nav_bar_li} onClick={handleOpenHomeWindowSection1}>
+              <div
+                  className={`${style.span_link} ${
+                    link === "/home#section1" && router.asPath.includes("#section1") ? style.active : ''
+                  }`}
+                >
                   <span className="span span_light_small">02</span>
                   <div className={style.link}>
                     <p className="p">Idea</p>
@@ -73,8 +96,12 @@ const Index = () => {
                   </div>
                 </div>
               </li>
-              <li id="map_link" className={style.nav_bar_li}>
-                <div className={style.span_link}>
+              <li id="section2_link" className={style.nav_bar_li} onClick={handleOpenHomeWindowSection2}>
+              <div
+                  className={`${style.span_link} ${
+                    link === "/home#section2" ? style.active : ''
+                  }`}
+                >
                   <span className="span span_light_small">03</span>
                   <div className={style.link}>
                     <p className="p">Map</p>
@@ -82,8 +109,16 @@ const Index = () => {
                   </div>
                 </div>
               </li>
-              <li id="about_link" className={style.nav_bar_li} onClick={handleOpenAboutWindow}>
-                <div className={style.span_link}>
+              <li
+                id="about_link"
+                className={style.nav_bar_li}
+                onClick={handleOpenAboutWindow}
+              >
+                 <div
+                  className={`${style.span_link} ${
+                    router.pathname === '/about' ? style.active : ''
+                  }`}
+                >
                   <span className="span span_light_small">04</span>
                   <div className={style.link}>
                     <p className="p">About</p>
