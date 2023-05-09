@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import MainLayout from '@/components/layouts/MainLayout';
 import HomeLayout from '@/components/layouts/HomeLayout';
 import BasicLayout from '@/components/layouts/BasicLayout';
+import AboutLayout from '@/components/layouts/AboutLayout';
 
 import Logo from 'p/img/logo_omega_ascent_white.svg';
 
@@ -18,7 +19,7 @@ export default function App({ Component, pageProps }) {
   if (router.asPath.startsWith('/home')) {
     Layout = HomeLayout;
   } else if (router.asPath.startsWith('/about')) {
-    Layout = MainLayout;
+    Layout = AboutLayout;
   } else if (router.asPath.startsWith('/buy')) {
     Layout = MainLayout;
   } else {
