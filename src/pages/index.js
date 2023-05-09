@@ -33,7 +33,7 @@ const Index = () => {
             for a <span className="span span_medium">Visual Presentation</span>
           </p>
           <p className="p p_medium">
-            The <span className="span span_medium">“Crypto Monnaie”</span>{' '}
+            The <span className="span span_medium">“Cryptocurrency</span>{' '}
             does&apos;t exist, otherwise it&apos;s not us
           </p>
           <p className="p p_medium">
