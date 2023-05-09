@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import style from './index.module.scss';
 
 const Index = (props) => {
-  console.log(props.modalOpen);
+  const [hasDelayPassed, setDelayPassed] = useState(false);
+
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      setDelayPassed(true);
+    }, 500);
+    return () => clearTimeout(timerId);
+  }, []);
+
   function handleCloseModal() {
-    props.setModalOpen(false);
+    setDelayPassed(false);
+    const timerId = setTimeout(() => {
+      props.setModalOpen(false);
+    }, 500);
+    return () => clearTimeout(timerId);
   }
+
   return (
-    <div className={`${style.modal_page} ${props.modalOpen ? style.open : ''}`}>
+    <div className={`${style.modal_page} ${hasDelayPassed ? style.open : ''}`}>
       <div
-        className={`${style.modal_cont} ${props.modalOpen ? style.open : ''}`}
+        className={`${style.modal_cont} ${hasDelayPassed ? style.open : ''}`}
       >
         <div className={style.left_modal}>
           <div className={style.close_modal} onClick={handleCloseModal}>
