@@ -20,10 +20,14 @@
         flex-direction: column;
         gap: 30px;
         left: 401px;
-        top: 60px;
-        
+        top: 60px;        
         color: white;
         font-family: $second_font;
+        .title {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
     }
     .person-info {
         display: flex;
