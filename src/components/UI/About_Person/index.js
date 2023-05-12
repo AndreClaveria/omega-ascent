@@ -15,7 +15,7 @@ const Index = (props) => {
             </div>
             <div className={style.name}>
             <Title
-              level="h1"
+              level="h1_light"
               title={props.title}
               className="h1"
               size="title"

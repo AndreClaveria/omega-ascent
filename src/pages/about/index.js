@@ -11,7 +11,7 @@ const Index = () => {
     <div className={style.about_page}>
       <div className={style.head}>
       <Title
-              level="h1"
+              level="h1_light"
               title="LOREM IPSUM DOLOR SIT AMET CONSECTETUR"
               className="h1"
               size="title"

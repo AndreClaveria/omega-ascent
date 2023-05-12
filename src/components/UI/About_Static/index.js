@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import Avatar from '../../../../public/img/about_page/user-1.png';
-import Avatar2 from '../../../../public/img/about_page/cat.jpeg';
+import Avatar2 from '../../../../public/img/about_page/cat-1.jpg';
 import Avatar3 from '../../../../public/img/about_page/zwodash.png';
 import Title from '@/components/UI/Title'
 import Person from '@/components/UI/About_Person'
