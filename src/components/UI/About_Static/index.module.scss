@@ -1,3 +1,11 @@
-h1 {
-    font-size: $title_font_size
-} ;
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 43px;
+    width: auto;
+    height: auto;
+    
+}

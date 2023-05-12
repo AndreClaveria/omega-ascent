@@ -2,6 +2,7 @@ import React from 'react';
 import style from './index.module.scss';
 
 import Title from '@/components/UI/Title';
+import Avatar from '@/components/UI/About_Static';
 
 
 const Index = () => {
@@ -9,7 +10,6 @@ const Index = () => {
   return (
     <div className={style.about_page}>
       <div className={style.head}>
-
       <Title
               level="h1"
               title="LOREM IPSUM DOLOR SIT AMET CONSECTETUR"
@@ -19,8 +19,13 @@ const Index = () => {
       <p>
       Lorem ipsum dolor sit amet consectetur. At lacus fringilla
        imperdiet tristique dignissim maecenas mauris gravida.
+        Adipiscing elit vestibulum ultricies ante lectus. Lorem ipsum dolor sit amet consectetur. At lacus fringilla
+       imperdiet tristique dignissim maecenas mauris gravida.
         Adipiscing elit vestibulum ultricies ante lectus. 
       </p>
+      </div>
+      <div className={style.person_info}>
+        <Avatar />
       </div>
       
       
