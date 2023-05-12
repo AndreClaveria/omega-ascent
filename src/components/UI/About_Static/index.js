@@ -15,13 +15,13 @@ const Index = () => {
     return (
         <div className={style.container}>
 
-        <Person title="LOREM IPSUM DOLOR" imagesrc={Avatar} />
+        <Person title="The Leon" imagesrc={Avatar} />
 
-        <Person title="LOREM IPSUM DOLOR" imagesrc={Avatar2} />
+        <Person title="D Nyd" imagesrc={Avatar2} />
 
-        <Person title="LOREM IPSUM DOLOR" imagesrc={Avatar3} />
+        <Person title="Zwodash" imagesrc={Avatar3} />
 
-        <Person title="LOREM IPSUM DOLOR" imagesrc={Avatar} />
+        <Person title="Tsuya" imagesrc={Avatar} />
 
         </div>
     );
