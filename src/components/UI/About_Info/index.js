@@ -28,21 +28,24 @@ const Index = (props) => {
 
             </div>
             <div className={style.content}>
-                <div className='info'>
+                <div className={style.info}>
+                    <div className={style.info__text}>
                     <p>
                     {props.description}
                     </p>
+                    </div>
+                    <div className={style.info__comment}>
                     <p>
-                     &{props.comment}
+                     {props.comment}
                     </p>
+                    </div>
 
                 </div>
                 <div className={style.social}>
-                   {/*<Image src={LinkedIn.src} alt='linkedin' />
-                    <Image src={Twitter.src} alt='twitter' />
-                    <Image src={Instagram.src} alt='instagram' />
-                    <Image src={Github.src} alt='github' />
-    */}
+                   <Image src={LinkedIn.src} alt='linkedin' width={50} height={50} />
+                    <Image src={Twitter.src} alt='twitter' width={50} height={50} />
+                    <Image src={Instagram.src} alt='instagram' width={50} height={50} />
+                    <Image src={Github.src} alt='github' width={50} height={50} />
                     
                     
                 </div>

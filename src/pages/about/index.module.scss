@@ -9,7 +9,7 @@
 .about_page{
     width: auto;
     height: 100%;
-    margin: 150px 80px 0px 80px;
+    margin: 150px 100px 0px 100px;
    // display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@
         gap: 30px;
         left: 401px;
         top: 60px;        
-        color: white;
+        color: $white_color;
         font-family: $second_font;
         .title {
             justify-content: center;
