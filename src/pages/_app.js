@@ -10,7 +10,7 @@ import HomeLayout from '@/components/layouts/HomeLayout';
 import BasicLayout from '@/components/layouts/BasicLayout';
 import AboutLayout from '@/components/layouts/AboutLayout';
 
-import Logo from 'p/img/logo_omega_ascent_white.svg';
+import Logo from 'p/img/white/logo_omega_ascent_white.svg';
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();

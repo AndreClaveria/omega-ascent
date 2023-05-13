@@ -44,6 +44,9 @@ body {
   color: $white_color;
   font-size: $font_size;
   font-family: $second_font;
+  &_small_small {
+    font-size: $small_small_font_size;
+  }
   &_small {
     font-size: $small_font_size;
   }
