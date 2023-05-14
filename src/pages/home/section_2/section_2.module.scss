@@ -1,0 +1,138 @@
+@import '@/styles/variable.scss';
+
+// ------------------------------+
+//
+//          SECTION 2
+//
+// ------------------------------+
+
+.cont_section_2 {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .circle {
+    margin-top: calc($big_margin * 2);
+    height: 540px;
+    width: 540px;
+    border-radius: 50%;
+    border: solid $border_width rgba($color: $white_color, $alpha: 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .text_description{
+      margin: 100px;
+      text-align: center;
+      line-height: 30px;
+      transition: all $transition;
+      .letter_name{
+        text-decoration: underline;
+        font-weight: bold;
+      }
+      &.vanish{
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      &.appear{
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .zeta,
+    .epsilon,
+    .delta,
+    .alpha,
+    .omega,
+    .beta {
+      height: 100px;
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: rgba($color: $first_color, $alpha: 0.4);
+      border-radius: $border_radius;
+      transition: $transition all;
+      cursor: pointer;
+      position: relative;
+      font-weight: bold;
+      .span_cont {
+        margin-top: $small_margin;
+        height: 20px;
+        position: relative;
+        overflow: hidden;
+        span {
+          display: inline-block;
+          &:nth-child(1) {
+            transform-origin: top;
+            transition: all $transition_long ease-in-out;
+          }
+          &:nth-child(2) {
+            transform: translate3d(0, 150%, 0);
+            position: absolute;
+            width: 100%;
+            text-align: right;
+            right: 0;
+            opacity: 1;
+            transition: all $transition_long ease-in-out;
+          }
+        }
+      }
+      &:hover {
+        border-radius: 50%;
+        border: solid $border_width $second_color;
+        box-shadow: 0 0 40px rgba($color: $white_color, $alpha: 0.4);
+        .span_cont {
+          span {
+            &:nth-child(1) {
+              transform: translateY(-100px);
+            }
+            &:nth-child(2) {
+              opacity: 1;
+              transform: translate3d(0, 0, 0);
+            }
+          }
+        }
+      }
+    }
+    .omega {
+      position: absolute;
+      top: -10%;
+      left: 50%;
+      transform: translate(-50%, 10%);
+    }
+    .zeta {
+      position: absolute;
+      top: 20%;
+      left: -4%;
+      transform: translate(4%, -20%);
+    }
+    .epsilon {
+      position: absolute;
+      top: 20%;
+      right: -4%;
+      transform: translate(4%, -20%);
+    }
+    .delta {
+      position: absolute;
+      bottom: -6%;
+      left: 50%;
+      transform: translate(-50%, 6%);
+    }
+    .alpha {
+      position: absolute;
+      bottom: 20%;
+      left: -4%;
+      transform: translate(4%, -20%);
+    }
+    .beta {
+      position: absolute;
+      bottom: 20%;
+      right: -4%;
+      transform: translate(4%, -20%);
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import style from '../index.module.scss';
+import style from './section_1.module.scss'
 
 import ImageStyle from '@/components/UI/Logo';
 
@@ -11,6 +11,7 @@ import Logo_Valo from 'p/img/autre_page_home/valo.svg';
 
 const Section1 = () => {
   const [ascent, setAscent] = useState(true);
+  const [vanish, setVanish] = useState(false);
   const [everest, setEverest] = useState(false);
   const [valo, setValo] = useState(false);
   const [date_Years, setDate_Years] = useState('22/05/2023');
@@ -20,36 +21,54 @@ const Section1 = () => {
   const [image_bubble_left, setImage_bubble_left] = useState(Logo_OA);
 
   function handleAscent() {
-    setDate_Years('22/05/2023');
-    setText_Info(
-      "Omega Ascent is the perfect way to blast off your investment portfolio. Whether you're a seasoned crypto pro or a curious newcomer, Omega Ascent is the ticket to new heights of financial success. So what are you waiting for? Buckle up and join the ascent today!"
-    );
-    setImage_bubble_left(Logo_OA);
-    setAscent(true);
-    setEverest(false);
-    setValo(false);
+    setVanish(true);
+    const timer = setTimeout(() => {
+      setDate_Years('22/05/2023');
+      setText_Info(
+        "Omega Ascent is the perfect way to blast off your investment portfolio. Whether you're a seasoned crypto pro or a curious newcomer, Omega Ascent is the ticket to new heights of financial success. So what are you waiting for? Buckle up and join the ascent today!"
+      );
+      setImage_bubble_left(Logo_OA);
+      setAscent(true);
+      setEverest(false);
+      setValo(false);
+      setVanish(false);
+    }, 400);
+
+    return () => clearTimeout(timer);
   }
 
   function handleEverest() {
-    setDate_Years('22/05/2023');
-    setText_Info(
-      "The first successful ascent of Everest was made by Sir Edmund Hillary and Tenzing Norgay, well play to them ! For those who don't know Everest is the highest mountain in the world with at 8 849m above sea level !"
-    );
-    setImage_bubble_left(Logo_Everest);
-    setAscent(false);
-    setEverest(true);
-    setValo(false);
+    setVanish(true);
+    const timer = setTimeout(() => {
+      setDate_Years('22/05/2023');
+      setText_Info(
+        "The first successful ascent of Everest was made by Sir Edmund Hillary and Tenzing Norgay, well play to them ! For those who don't know Everest is the highest mountain in the world with at 8 849m above sea level !"
+      );
+      setImage_bubble_left(Logo_Everest);
+      setAscent(false);
+      setEverest(true);
+      setValo(false);
+      setVanish(false);
+    }, 400);
+
+    return () => clearTimeout(timer);
   }
 
   function handleValo() {
-    setDate_Years('02/06/2020');
-    setText_Info(
-      "Ascent is a map Valorant located in Italy, with areas for long-range combat and narrow corridors for close-range battles. She's one of the most appreciate and challenging map ! Ascent is considered a balanced map that gives both teams an equal chance to win !"
-    );
-    setImage_bubble_left(Logo_Valo);
-    setAscent(false);
-    setEverest(false);
-    setValo(true);
+    setVanish(true);
+    const timer = setTimeout(() => {
+      setDate_Years('02/06/2020');
+      setText_Info(
+        "Ascent is a map Valorant located in Italy, with areas for long-range combat and narrow corridors for close-range battles. She's one of the most appreciate and challenging map ! Ascent is considered a balanced map that gives both teams an equal chance to win !"
+      );
+      setImage_bubble_left(Logo_Valo);
+      setAscent(false);
+      setEverest(false);
+      setValo(true);
+      setVanish(false);
+    }, 400);
+
+    return () => clearTimeout(timer);
   }
 
   return (
@@ -64,11 +83,11 @@ const Section1 = () => {
             <div className={style.year_cont}>
               <ImageStyle
                 src={image_bubble_left}
-                className=""
+                className={vanish ? style.vanish : style.appear}
                 width={100}
                 alt="Logo Year"
               />
-              <p className={`p ${style.date_p}`}>{date_Years}</p>
+              <p className={`p ${style.date_p} ${vanish ? style.vanish : style.appear}`}>{date_Years}</p>
             </div>
             <div className={style.timeline_img}></div>
           </div>
@@ -112,7 +131,7 @@ const Section1 = () => {
             </div>
           </div>
           <div className={style.bubble_ascent_bot}>
-            <p className="p">{text_Info}</p>
+            <p className={`p ${vanish ? style.vanish : style.appear}`}>{text_Info}</p>
           </div>
         </div>
       </div>

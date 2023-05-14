@@ -1,0 +1,246 @@
+@import '@/styles/variable.scss';
+
+// ------------------------------+
+//
+//          SECTION 1
+//
+// ------------------------------+
+
+.cont_section_1 {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  .section_bubble_cont {
+    width: 90%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .bubble_time {
+      width: 32%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border: solid $border_width $second_color;
+      border-radius: $border_radius;
+      .bubble_time_top {
+        width: 100%;
+        height: 20%;
+        padding: $small_margin 0;
+        border-bottom: solid $border_width $second_color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          padding: $small_margin;
+          margin-left: $small_margin;
+        }
+        .year {
+          background-color: $white_color;
+          color: $black_color;
+          border-radius: $small_border_radius;
+          margin-right: $small_margin;
+          font-weight: 600;
+        }
+      }
+      .bubble_time_bot {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .year_cont {
+          width: 98%;
+          height: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          img {
+            margin-left: $margin;
+            transition: $transition all;
+            &.vanish {
+              transform: translateY(40px);
+              opacity: 0;
+            }
+            &.appear {
+              transform: translateY(0px);
+              opacity: 1;
+            }
+          }
+          .date_p {
+            font-size: $big_font_size;
+            font-weight: bold;
+            margin-right: $margin;
+            &.vanish {
+              transform: translateY(40px);
+              opacity: 0;
+            }
+            &.appear {
+              transform: translateY(0px);
+              opacity: 1;
+            }
+          }
+        }
+        .timeline_img {
+          height: 20px;
+          width: 88%;
+          background: url('../../../../public/img/autre_page_home/timeline.png');
+          background-size: 100%;
+          background-repeat: no-repeat;
+          margin: 0 $margin;
+        }
+      }
+    }
+    .bubble_ascent {
+      width: 66%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border: solid $border_width $second_color;
+      border-radius: $border_radius;
+      .bubble_ascent_top {
+        width: 100%;
+        height: 20%;
+        padding: $small_margin 0;
+        border-bottom: solid $border_width $second_color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .bubble_ascent_top_left {
+          height: 100%;
+          margin-left: $small_margin;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          p {
+            margin-left: $small_margin;
+          }
+        }
+        .bubble_ascent_top_right {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          margin-right: $small_margin;
+          .valo_p,
+          .everest_p,
+          .ascent_p {
+            padding: $small_margin;
+            background-color: $white_color;
+            color: $black_color;
+            border-radius: $small_border_radius;
+            margin-right: $small_margin;
+            font-weight: 600;
+            opacity: 0.2;
+            transition: all $transition;
+            cursor: pointer;
+            &.active {
+              opacity: 1;
+              &:hover {
+                opacity: 1;
+              }
+            }
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+      .bubble_ascent_bot {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        p {
+          margin-top: $margin;
+          padding: 0 $margin;
+          text-indent: $text_indent;
+          line-height: $line_height;
+          transition: all $transition;
+          &.vanish {
+            transform: translateY(40px);
+            opacity: 0;
+          }
+          &.appear {
+            transform: translateY(0px);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ------------------------------+
+//
+//          SECTION 1 BIS
+//
+// ------------------------------+
+
+.cont_section_1_bis {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .text_cont {
+    display: flex;
+    justify-content: center;
+    gap: calc($big_margin + $margin);
+    .text_cont_left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      .p_container {
+        margin-top: $small_margin;
+        overflow: hidden;
+        p {
+          padding: 0;
+          margin: $small_margin;
+          font-size: $title_font_size;
+          transform: translateY(60px);
+          transition: all $transition_long_long;
+          &.appear {
+            transform: translateY(0px);
+          }
+          &.second_line {
+            margin-right: calc($big_margin * 2);
+          }
+          &.third_line {
+            margin-right: calc($big_margin + $margin);
+          }
+        }
+      }
+    }
+    .text_cont_right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-content: flex-start;
+      .p_container {
+        margin-top: $small_margin;
+        overflow: hidden;
+        p {
+          padding: 0;
+          margin: $small_margin;
+          font-size: $title_font_size;
+          transform: translateY(60px);
+          transition: all $transition_long_long;
+          &.appear {
+            transform: translateY(0px);
+          }
+          &.second_line {
+            margin-left: calc($big_margin * 2);
+          }
+          &.third_line {
+            margin-left: calc($big_margin + $margin);
+          }
+        }
+      }
+    }
+  }
+}

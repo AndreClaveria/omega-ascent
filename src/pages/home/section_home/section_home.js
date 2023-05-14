@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../index.module.scss';
+import style from './section_home.module.scss';
 
 import Title from '@/components/UI/Title';
 import ImageStyle from '@/components/UI/Logo';
