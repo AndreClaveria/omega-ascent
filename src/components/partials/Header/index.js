@@ -29,15 +29,15 @@ const Index = () => {
     router.push('/about');
   }
   function handleOpenHomeWindow() {
-    setLink("/home")
+    setLink('/home');
     router.push('/home');
   }
   function handleOpenHomeWindowSection1() {
-    setLink("/home#section1")
+    setLink('/home#section1');
     router.push('/home#section1');
   }
   function handleOpenHomeWindowSection2() {
-    setLink("/home#section2")
+    setLink('/home#section2');
     router.push('/home#section2');
   }
   return (
@@ -73,7 +73,7 @@ const Index = () => {
               >
                 <div
                   className={`${style.span_link} ${
-                    link === "/home" ? style.active : ''
+                    link === '/home' ? style.active : ''
                   }`}
                 >
                   <span className="span span_light_small">01</span>
@@ -83,10 +83,17 @@ const Index = () => {
                   </div>
                 </div>
               </li>
-              <li id="section1_link" className={style.nav_bar_li} onClick={handleOpenHomeWindowSection1}>
-              <div
+              <li
+                id="section1_link"
+                className={style.nav_bar_li}
+                onClick={handleOpenHomeWindowSection1}
+              >
+                <div
                   className={`${style.span_link} ${
-                    link === "/home#section1" && router.asPath.includes("#section1") ? style.active : ''
+                    link === '/home#section1' &&
+                    router.asPath.includes('#section1')
+                      ? style.active
+                      : ''
                   }`}
                 >
                   <span className="span span_light_small">02</span>
@@ -96,10 +103,14 @@ const Index = () => {
                   </div>
                 </div>
               </li>
-              <li id="section2_link" className={style.nav_bar_li} onClick={handleOpenHomeWindowSection2}>
-              <div
+              <li
+                id="section2_link"
+                className={style.nav_bar_li}
+                onClick={handleOpenHomeWindowSection2}
+              >
+                <div
                   className={`${style.span_link} ${
-                    link === "/home#section2" ? style.active : ''
+                    link === '/home#section2' ? style.active : ''
                   }`}
                 >
                   <span className="span span_light_small">03</span>
@@ -114,7 +125,7 @@ const Index = () => {
                 className={style.nav_bar_li}
                 onClick={handleOpenAboutWindow}
               >
-                 <div
+                <div
                   className={`${style.span_link} ${
                     router.pathname === '/about' ? style.active : ''
                   }`}

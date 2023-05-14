@@ -19,8 +19,8 @@ const Index = (props) => {
       if (percentage >= 97) {
         setPercentage(100);
         setTimeout(() => {
-            props.setLoader(false);
-          }, 400);
+          props.setLoader(false);
+        }, 400);
       }
     }, 100);
     return () => clearInterval(interval);

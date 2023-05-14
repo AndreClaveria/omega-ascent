@@ -9,10 +9,13 @@ import Avatar3 from '../../../../public/img/about_page/zwodash.png';
 import Avatar4 from '../../../../public/img/about_page/tsuya.jpg';
 
 const Index = () => {
-    return (
-        <div className={style.container}>
-            <div className={style.list}>
-            <Info imagesrc={Avatar1} title="Florian Moracchini" description="Lorem ipsum dolor sit amet consectetur. At lacus fringilla
+  return (
+    <div className={style.container}>
+      <div className={style.list}>
+        <Info
+          imagesrc={Avatar1}
+          title="Florian Moracchini"
+          description="Lorem ipsum dolor sit amet consectetur. At lacus fringilla
        imperdiet tristique dignissim maecenas mauris gravida.
         Adipiscing elit vestibulum ultricies ante lectus. Lorem ipsum dolor sit amet consectetur. At lacus fringilla
        imperdiet tristique dignissim maecenas mauris gravida.
@@ -20,13 +23,15 @@ const Index = () => {
         imperdiet tristique dignissim maecenas mauris gravida.
          Adipiscing elit vestibulum ultricies ante lectus. Lorem ipsum dolor sit amet consectetur. At lacus fringilla
         imperdiet tristique dignissim maecenas mauris gravida.
-         Adipiscing elit vestibulum ultricies ante lectus. "  comment="Lorem ipsum dolor sit amet consectetur. At lacus fringilla
+         Adipiscing elit vestibulum ultricies ante lectus. "
+          comment="Lorem ipsum dolor sit amet consectetur. At lacus fringilla
          imperdiet tristique dignissim maecenas mauris gravida.
           Adipiscing elit vestibulum ultricies ante lectus. Lorem ipsum dolor sit amet consectetur. At lacus fringilla
          imperdiet tristique dignissim maecenas mauris gravida.
-          Adipiscing elit vestibulum ultricies ante lectus. "/>
+          Adipiscing elit vestibulum ultricies ante lectus. "
+        />
 
-           {/* <Info imagesrc={Avatar2} title="Yvan Daryl Nemeck" description="Lorem ipsum dolor sit amet consectetur. At lacus fringilla
+        {/* <Info imagesrc={Avatar2} title="Yvan Daryl Nemeck" description="Lorem ipsum dolor sit amet consectetur. At lacus fringilla
          imperdiet tristique dignissim maecenas mauris gravida.
             Adipiscing elit vestibulum ultricies ante lectus. Lorem ipsum dolor sit amet consectetur. At lacus fringilla
             imperdiet tristique dignissim maecenas mauris gravida.
@@ -68,11 +73,9 @@ const Index = () => {
             imperdiet tristique dignissim maecenas mauris gravida.
             Adipiscing elit vestibulum ultricies ante lectus. "/>
     */}
-
-            </div>
-                    
-        </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 
 export default Index;

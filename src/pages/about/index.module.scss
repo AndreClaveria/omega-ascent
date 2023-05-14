@@ -6,30 +6,30 @@
 //
 // ------------------------------+
 
-.about_page{
+.about_page {
+  width: auto;
+  height: 100%;
+  margin: 150px 100px 0px 100px;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+  .head {
     width: auto;
-    height: 100%;
-    margin: 150px 100px 0px 100px;
-   // display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-behavior: smooth;
-    .head {
-        width: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        left: 401px;
-        top: 60px;        
-        color: $white_color;
-        font-family: $second_font;
-        .title {
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    left: 401px;
+    top: 60px;
+    color: $white_color;
+    font-family: $second_font;
+    .title {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-    .person-info {
-        display: flex;
-    }
+  }
+  .person-info {
+    display: flex;
+  }
 }
