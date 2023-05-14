@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import style from './index.module.scss';
 import { useRouter } from 'next/router';
 
-import Letters from 'p/img/letters.png';
-import Logo_O from 'p/img/omega_logo.svg';
-import Logo_A from 'p/img/ascent_logo.svg';
+import Letters from 'p/img/separate_logo/letters.png';
+import Logo_O from 'p/img/separate_logo/omega_logo.svg';
+import Logo_A from 'p/img/separate_logo/ascent_logo.svg';
 
-import Image from '@/components/UI/Logo';
+import ImageStyle from '@/components/UI/Logo';
 import Button from '@/components/UI/Button';
 import Bubble from '@/components/UI/Info_Bubble';
 import Modal from '@/components/partials/Modal';
@@ -14,9 +14,20 @@ import Modal from '@/components/partials/Modal';
 const Index = () => {
   const router = useRouter();
 
+  const [link, setLink] = useState(router.pathname);
   const [modalOpen, setModalOpen] = useState(false);
 
-  const [link, setLink] = useState(router.pathname);
+  useEffect(() => {
+    if ((link == '/home')) {
+      setLink('/home');
+    }
+    if ((link == '/home#section1')) {
+      setLink('/home#section1');
+    }
+    if ((link == '/home#section2')) {
+      setLink('/home#section2');
+    }
+  }, [link]);
 
   function handleOpenModal() {
     setModalOpen(true);
@@ -45,19 +56,19 @@ const Index = () => {
       <div className={style.navbar}>
         <div className={style.nav_cont}>
           <div className={style.nav_bar_logo}>
-            <Image
+            <ImageStyle
               src={Letters}
               className={style.letters}
               width={240}
               alt="Letters"
             />
-            <Image
+            <ImageStyle
               src={Logo_A}
               className={style.logo_a}
               width={60}
               alt="Logo_Ascent"
             />
-            <Image
+            <ImageStyle
               src={Logo_O}
               className={style.logo_o}
               width={40}
@@ -78,8 +89,8 @@ const Index = () => {
                 >
                   <span className="span span_light_small">01</span>
                   <div className={style.link}>
-                    <p className="p">Intro</p>
-                    <p className="p">Intro</p>
+                    <p className="p">Home</p>
+                    <p className="p">Home</p>
                   </div>
                 </div>
               </li>
@@ -98,8 +109,8 @@ const Index = () => {
                 >
                   <span className="span span_light_small">02</span>
                   <div className={style.link}>
-                    <p className="p">Idea</p>
-                    <p className="p">Idea</p>
+                    <p className="p">Ascent</p>
+                    <p className="p">Ascent</p>
                   </div>
                 </div>
               </li>
@@ -115,8 +126,8 @@ const Index = () => {
                 >
                   <span className="span span_light_small">03</span>
                   <div className={style.link}>
-                    <p className="p">Map</p>
-                    <p className="p">Map</p>
+                    <p className="p">Omega</p>
+                    <p className="p">Omega</p>
                   </div>
                 </div>
               </li>
