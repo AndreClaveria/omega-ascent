@@ -51,10 +51,7 @@
         width: 80%;
         height: 4px;
         background-color: white;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding-left: 50%;
       }
       .social_network {
         width: 100%;
@@ -63,6 +60,17 @@
       }
       .social_blank {
         margin: 24%;
+      }
+      .community {
+        .vertical_text {
+          transform: rotate(-270deg);
+          transform-origin: left bottom 1;
+          margin-bottom: 150%;
+          color: white;
+          font-size: $title_font_size; /* adjust the font size as needed */
+          font-family: $first_font;
+          text-orientation: mixed;
+        } /* adjust the position of the text as needed */
       }
     }
     .right_modal {

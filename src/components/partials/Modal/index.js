@@ -37,6 +37,9 @@ const Index = (props) => {
           </div>
 
           <div className={style.social_network}>
+            <div className={style.community}>
+              <p className={style.vertical_text}>COMMUNITY</p>
+            </div>
             <div className={style.line}></div>
             <div className={style.social_blank}>
               <Image
