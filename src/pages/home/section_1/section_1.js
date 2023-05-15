@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import style from './section_1.module.scss'
+import style from './section_1.module.scss';
 
 import ImageStyle from '@/components/UI/Logo';
 
@@ -87,9 +87,17 @@ const Section1 = () => {
                 width={100}
                 alt="Logo Year"
               />
-              <p className={`p ${style.date_p} ${vanish ? style.vanish : style.appear}`}>{date_Years}</p>
+              <p
+                className={`p ${style.date_p} ${
+                  vanish ? style.vanish : style.appear
+                }`}
+              >
+                {date_Years}
+              </p>
             </div>
-            <div className={style.timeline_img}></div>
+            <div className={style.timeline}>
+              <div className={style.timeline_img}></div>
+            </div>
           </div>
         </div>
         <div className={style.bubble_ascent}>
@@ -131,7 +139,9 @@ const Section1 = () => {
             </div>
           </div>
           <div className={style.bubble_ascent_bot}>
-            <p className={`p ${vanish ? style.vanish : style.appear}`}>{text_Info}</p>
+            <p className={`p ${vanish ? style.vanish : style.appear}`}>
+              {text_Info}
+            </p>
           </div>
         </div>
       </div>

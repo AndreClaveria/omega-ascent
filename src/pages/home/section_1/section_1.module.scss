@@ -51,6 +51,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+        overflow: hidden;
         .year_cont {
           width: 98%;
           height: 80%;
@@ -83,13 +85,22 @@
             }
           }
         }
-        .timeline_img {
-          height: 20px;
-          width: 88%;
-          background: url('../../../../public/img/autre_page_home/timeline.png');
-          background-size: 100%;
-          background-repeat: no-repeat;
-          margin: 0 $margin;
+        .timeline{
+          position: absolute;
+          bottom: 2%;
+          transform: translate(0, 4%);
+          height: 80px;
+          width: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .timeline_img {
+            width: 90%;
+            height: 90%;
+            background: url('../../../../public/img/autre_page_home/timeline.gif');
+            background-size: 100%;
+            background-repeat: no-repeat;
+          }
         }
       }
     }
