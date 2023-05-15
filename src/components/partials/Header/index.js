@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import style from './index.module.scss';
 import { useRouter } from 'next/router';
 
-import Letters from 'p/img/letters.png';
-import Logo_O from 'p/img/omega_logo.svg';
-import Logo_A from 'p/img/ascent_logo.svg';
+import Letters from 'p/img/separate_logo/letters.png';
+import Logo_O from 'p/img/separate_logo/omega_logo.svg';
+import Logo_A from 'p/img/separate_logo/ascent_logo.svg';
 
 import Image from '@/components/UI/Logo';
 import Button from '@/components/UI/Button';
@@ -21,6 +21,10 @@ const Index = () => {
   function handleOpenModal() {
     setModalOpen(true);
   }
+  function handleLaunch() {
+    console.log('Launch button clicked!');
+    // Add your logic for launching here
+  }
 
   function handleOpenBuyWindow() {
     router.push('/buy');
@@ -29,15 +33,15 @@ const Index = () => {
     router.push('/about');
   }
   function handleOpenHomeWindow() {
-    setLink("/home")
+    setLink('/home');
     router.push('/home');
   }
   function handleOpenHomeWindowSection1() {
-    setLink("/home#section1")
+    setLink('/home#section1');
     router.push('/home#section1');
   }
   function handleOpenHomeWindowSection2() {
-    setLink("/home#section2")
+    setLink('/home#section2');
     router.push('/home#section2');
   }
   return (
@@ -73,7 +77,7 @@ const Index = () => {
               >
                 <div
                   className={`${style.span_link} ${
-                    link === "/home" ? style.active : ''
+                    link === '/home' ? style.active : ''
                   }`}
                 >
                   <span className="span span_light_small">01</span>
@@ -83,10 +87,17 @@ const Index = () => {
                   </div>
                 </div>
               </li>
-              <li id="section1_link" className={style.nav_bar_li} onClick={handleOpenHomeWindowSection1}>
-              <div
+              <li
+                id="section1_link"
+                className={style.nav_bar_li}
+                onClick={handleOpenHomeWindowSection1}
+              >
+                <div
                   className={`${style.span_link} ${
-                    link === "/home#section1" && router.asPath.includes("#section1") ? style.active : ''
+                    link === '/home#section1' &&
+                    router.asPath.includes('#section1')
+                      ? style.active
+                      : ''
                   }`}
                 >
                   <span className="span span_light_small">02</span>
@@ -96,10 +107,14 @@ const Index = () => {
                   </div>
                 </div>
               </li>
-              <li id="section2_link" className={style.nav_bar_li} onClick={handleOpenHomeWindowSection2}>
-              <div
+              <li
+                id="section2_link"
+                className={style.nav_bar_li}
+                onClick={handleOpenHomeWindowSection2}
+              >
+                <div
                   className={`${style.span_link} ${
-                    link === "/home#section2" ? style.active : ''
+                    link === '/home#section2' ? style.active : ''
                   }`}
                 >
                   <span className="span span_light_small">03</span>
@@ -114,7 +129,7 @@ const Index = () => {
                 className={style.nav_bar_li}
                 onClick={handleOpenAboutWindow}
               >
-                 <div
+                <div
                   className={`${style.span_link} ${
                     router.pathname === '/about' ? style.active : ''
                   }`}
@@ -133,7 +148,7 @@ const Index = () => {
               type="button"
               className="btn_primary"
               title="LAUNCH"
-              handleClick=""
+              handleClick={handleLaunch}
             />
             <Button
               type="button"
