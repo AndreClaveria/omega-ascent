@@ -6,7 +6,7 @@
 //
 // ------------------------------+
 
-.layout_single_bot{
+.layout_single_bot {
   justify-content: flex-end;
 }
 .layout_bot {
@@ -15,6 +15,7 @@
 .layout_single_bot,
 .layout_bot {
   width: 100vw;
+  height: 124px;
   display: flex;
   align-items: center;
   position: fixed;
@@ -25,36 +26,79 @@
     display: flex;
     align-items: center;
     gap: $margin;
-    .down_left {
-      background: $white_color;
-      border-radius: $small_border_radius;
+    .down_left_cont {
+      width: 62px;
+      height: 62px;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 56px;
-      height: 56px;
-      cursor: pointer;
-      opacity: 1;
-      p {
-        color: $black_color;
+      .down_left {
+        background: $white_color;
+        border-radius: $small_border_radius;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 56px;
+        height: 56px;
+        transition: all $transition;
+        cursor: pointer;
+        opacity: 1;
+        .img_arrow {
+          transition: all $transition;
+          cursor: pointer;
+        }
+        &:hover {
+          width: 60px;
+          height: 60px;
+          .img_arrow {
+            cursor: pointer;
+            margin-top: $small_margin;
+          }
+        }
       }
     }
-    // .down_right {
-
-    // }
+    .down_right {
+      p{
+        transition: all $transition;
+      }
+      .opa{
+        opacity: 0;
+      }
+    }
   }
   .bubble_cont {
     margin-right: $big_margin;
     display: flex;
     flex-direction: column;
-    padding: $margin;
+    padding: $small_margin;
     background: rgba($color: $black_color, $alpha: 0.4);
     border-radius: $border_radius;
     cursor: pointer;
+    transition: all $transition;
     .bubble_top {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      .arrow_cont{
+        position: relative;
+        .img_arrow_right_white{
+          position: absolute;
+          top: 4px;
+          right: 4px;
+          transform: rotate(220deg);
+          transition: all $transition;
+          cursor: pointer;
+        }
+        .img_arrow_right{
+          cursor: pointer;
+          opacity: 0;
+          position: absolute;
+          top: 4px;
+          right: 4px;
+          transform: rotate(220deg);
+          transition: all $transition;
+        }
+      }
     }
     .bubble_bot {
       display: flex;
@@ -62,7 +106,20 @@
       justify-content: space-between;
     }
     &:hover {
-        background: rgba($color: $white_color, $alpha: 0.8);
+      padding: calc($small_margin + 2px);
+      background: rgba($color: $white_color, $alpha: 0.8);
+      .bubble_top {
+        .arrow_cont{
+          .img_arrow_right_white{
+            opacity: 0;
+          }
+          .img_arrow_right{
+            opacity: 1;
+            top: 2px;
+            right: 2px;
+          }
+        }
+      }
       p {
         color: $black_color;
       }
