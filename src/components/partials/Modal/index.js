@@ -78,12 +78,18 @@ const Index = (props) => {
                 width={36}
                 alt="Telegram"
               />
-              <Image
-                src={Lol}
-                className={style.logo_a}
-                width={36}
-                alt="League"
-              />
+              <a
+                href="https://www.leagueofgraphs.com/summoner/euw/hikkary#championsData-all-queues"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={Lol}
+                  className={style.logo_a}
+                  width={36}
+                  alt="League"
+                />
+              </a>
             </div>
           </div>
         </div>

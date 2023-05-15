@@ -8,9 +8,10 @@
 
 .modal_page {
   transition: all $transition_long ease-in-out;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  overflow: hidden;
   background: rgba($color: $black_color, $alpha: 0);
   width: 100vw;
   height: 100vh;
@@ -173,9 +174,3 @@
     }
   }
 }
-
-// ------------------------------+
-//
-//          HOVER / ACTIVE
-//
-// ------------------------------+
