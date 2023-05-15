@@ -36,7 +36,7 @@ const Index = (props) => {
                     </div>
                     <div className={style.info__comment}>
                     <p>
-                     {props.comment}
+                     &quot;{props.comment}&quot;
                     </p>
                     </div>
 

@@ -6,30 +6,36 @@
 //
 // ------------------------------+
 
-.about_page {
-  width: auto;
-  height: 100%;
-  margin: 150px 100px 0px 100px;
-  // display: flex;
+.about_page_intro {
+  width: 100%;
+  height: 100vh;
+  display: flex;
   justify-content: center;
   align-items: center;
-  scroll-behavior: smooth;
-  .head {
-    width: auto;
+  .about_page_intro_cont {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    left: 401px;
-    top: 60px;
-    color: $white_color;
-    font-family: $second_font;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    height: 80%;
     .title {
-      justify-content: center;
-      align-items: center;
+      width: 100%;
       text-align: center;
+      .p_title {
+        font-size: $title_font_size;
+      }
+    }
+    .team_info {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: $big_margin;
     }
   }
-  .person-info {
-    display: flex;
-  }
+}
+
+.about_page_scroll {
+  width: 90%;
 }

@@ -7,9 +7,6 @@ const Index = ({ children }) => {
   return (
     <div className={style.global_cont}>
       <Header />
-      <div className={style.stars}></div>
-      <div className={style.stars2}></div>
-      <div className={style.stars3}></div>
       {children}
     </div>
   );
