@@ -1,0 +1,10 @@
+@import '@/styles/variable.scss';
+
+.table_cont {
+  width: 80%;
+  height: 80%;
+  margin-top: $big_margin;
+  font-family: $second_font;
+
+  border: $border_width solid $first_color;
+}

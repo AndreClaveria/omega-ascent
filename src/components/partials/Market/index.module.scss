@@ -1,0 +1,73 @@
+@import '@/styles/variable.scss';
+
+.table_cont {
+  width: 80%;
+  height: 80%;
+  margin-top: $big_margin;
+  font-family: $second_font;
+  overflow: hidden !important;
+  overflow-y: scroll !important;
+  border-top: $border_width solid $first_color;
+  border-bottom: $border_width solid $first_color;
+  .tab {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    thead {
+      height: 60px;
+      width: 100%;
+      border-bottom: $border_width solid $first_color;
+      tr {
+        height: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        th {
+          height: 60px;
+          width: calc(100% / 5);
+
+          display: flex;
+
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    tbody {
+      height: 350px;
+      width: 100%;
+
+      tr {
+        height: 60px;
+        width: 100%;
+
+        border-top: $border_width solid $first_color;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        &:nth-child(2n + 1) {
+          background-color: rgba($color: $first_color, $alpha: 0.4);
+        }
+        td {
+          height: 60px;
+          width: calc(100% / 5);
+
+          display: flex;
+
+          justify-content: center;
+          align-items: center;
+          .crypto_price {
+            display: flex;
+            height: 100%;
+            justify-content: flex-start;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}

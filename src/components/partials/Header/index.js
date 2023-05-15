@@ -32,6 +32,10 @@ const Index = () => {
   function handleOpenModal() {
     setModalOpen(true);
   }
+  function handleLaunch() {
+    console.log('Launch button clicked!');
+    // Add your logic for launching here
+  }
 
   function handleOpenBuyWindow() {
     router.push('/buy');
@@ -155,7 +159,7 @@ const Index = () => {
               type="button"
               className="btn_primary"
               title="LAUNCH"
-              handleClick=""
+              handleClick={handleLaunch}
             />
             <Button
               type="button"
