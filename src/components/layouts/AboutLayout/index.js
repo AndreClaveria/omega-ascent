@@ -27,18 +27,24 @@ const Index = ({ children }) => {
     // width / height
     renderer.setSize(canvasCont.offsetWidth, canvasCont.offsetHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setClearColor(0x183d8a);
+
     // Stars
     const starGeometry = new THREE.BufferGeometry();
     const starMaterial = new THREE.PointsMaterial({
       color: 0xffffff,
+    });
+    const starMaterial2 = new THREE.PointsMaterial({
+      color: 0x183d8a,
+    });
+    const starMaterial3 = new THREE.PointsMaterial({
+      color: 0x9bb0da,
     });
 
     const starVertices = [];
     for (let index = 0; index < 2000; index++) {
       const x = (Math.random() - 0.5) * 2000;
       const y = (Math.random() - 0.5) * 2000;
-      const z = -Math.random() * 2000;
+      const z = -Math.random() * 1000;
       starVertices.push(x, y, z);
     }
     starGeometry.setAttribute(
@@ -46,7 +52,14 @@ const Index = ({ children }) => {
       new THREE.Float32BufferAttribute(starVertices, 3)
     );
     const stars = new THREE.Points(starGeometry, starMaterial);
-    scene.add(stars);
+    const stars2 = new THREE.Points(starGeometry, starMaterial2);
+    const stars3 = new THREE.Points(starGeometry, starMaterial3);
+
+    const group = new THREE.Group();
+    group.add(stars);
+    group.add(stars2);
+    group.add(stars3);
+    scene.add(group);
 
     // HOVER get mouse position
     const mouse = {
@@ -61,8 +74,8 @@ const Index = ({ children }) => {
     const animate = () => {
       requestAnimationFrame(animate);
       renderer.render(scene, camera);
-      stars.rotation.y += 0.002;
-      gsap.to(stars.rotation, {
+      group.rotation.y += 0.002;
+      gsap.to(group.rotation, {
         x: -mouse.y * 0.3,
         y: mouse.x * 0.5,
         duration: 1,
