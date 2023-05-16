@@ -19,7 +19,7 @@ const Index = () => {
 
       <Person title="Yvan Daryl Nemeck" imagesrc={Avatar2} />
 
-      <Person title="Ehtan Canoine" imagesrc={Avatar3} />
+      <Person title="Ethan Canoine" imagesrc={Avatar3} />
 
       <Person title="André Claveria" imagesrc={Avatar4} />
     </div>

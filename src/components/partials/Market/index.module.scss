@@ -1,7 +1,7 @@
 @import '@/styles/variable.scss';
 
 .table_cont {
-  width: 80%;
+  width: 96%;
   height: 80%;
   margin-top: $big_margin;
   font-family: $second_font;
@@ -9,6 +9,7 @@
   overflow-y: scroll !important;
   border-top: $border_width solid $first_color;
   border-bottom: $border_width solid $first_color;
+  border-left: $border_width solid $first_color;
   .tab {
     padding: 0;
     width: 100%;
@@ -30,7 +31,7 @@
           width: calc(100% / 5);
 
           display: flex;
-
+          font-weight: bold;
           justify-content: center;
           align-items: center;
         }
@@ -55,7 +56,7 @@
         td {
           height: 60px;
           width: calc(100% / 5);
-
+          font-weight: bold;
           display: flex;
 
           justify-content: center;
