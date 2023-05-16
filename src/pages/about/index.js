@@ -1,14 +1,15 @@
 import React from 'react';
 import style from './index.module.scss';
 
-import Title from '@/components/UI/Title';
 import AvatarInfo from '@/components/UI/About_Scroll';
 import Person from '@/components/UI/About_Person';
+import ImageStyle from '@/components/UI/Logo';
 
 import Avatar1 from 'p/img/about_page/blue_lion.png';
 import Avatar2 from 'p/img/about_page/cat-1.jpg';
 import Avatar3 from 'p/img/about_page/zwodash.png';
 import Avatar4 from 'p/img/about_page/tsuya.jpg';
+import Arrow from 'p/img/arrow/arrow.svg';
 
 const Index = () => {
   return (
@@ -29,10 +30,18 @@ const Index = () => {
 
             <Person title="André Claveria" imagesrc={Avatar4} />
           </div>
+          <div className={style.arrow_cont}>
+            <ImageStyle
+              src={Arrow}
+              className={`${style.img_arrow}`}
+              width={10}
+              alt="Arrow Down"
+            />
+          </div>
         </div>
       </div>
       <div className={style.about_page_scroll}>
-        <div className={style.infos}>{/*<AvatarInfo />*/}</div>
+        <AvatarInfo />
       </div>
     </>
   );

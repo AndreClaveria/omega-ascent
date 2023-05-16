@@ -4,7 +4,7 @@ import style from './index.module.scss';
 import Image from 'next/image';
 
 //import Avatar from '../../../../public/img/about_page/user-1.png';
-import Title from '@/components/UI/Title';
+//import Title from '@/components/UI/Title';
 
 const Index = (props) => {
   return (

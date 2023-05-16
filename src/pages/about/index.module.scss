@@ -2,7 +2,7 @@
 
 // ------------------------------+
 //
-//         ABOUT PAGE
+//         ABOUT PAGE COMPONENT
 //
 // ------------------------------+
 
@@ -19,6 +19,7 @@
     align-items: center;
     width: 90%;
     height: 80%;
+    position: relative;
     .title {
       width: 100%;
       text-align: center;
@@ -33,9 +34,40 @@
       align-items: center;
       margin-top: $big_margin;
     }
+    .arrow_cont {
+      background: $second_color;
+      border-radius: $small_border_radius;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 56px;
+      height: 56px;
+      transition: all $transition;
+      cursor: pointer;
+      opacity: 1;
+      .img_arrow {
+        transition: all $transition;
+        cursor: pointer;
+      }
+      &:hover {
+        width: 60px;
+        height: 60px;
+        .img_arrow {
+          cursor: pointer;
+          margin-top: $small_margin;
+        }
+      }
+    }
   }
 }
 
 .about_page_scroll {
-  width: 90%;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

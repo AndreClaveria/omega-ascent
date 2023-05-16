@@ -1,74 +1,85 @@
 @import '@/styles/variable.scss';
 
+// ------------------------------+
+//
+//         ABOUT PAGE COMPONENTS
+//
+// ------------------------------+
+
 .container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 82px;
-    .avatar{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0px;
-        gap: 43px;
-        position: absolute;
-        width: 600px;
-        height: 696px;
-        left: 82px;
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 100%;
-            border: 1px solid rgba(155, 176, 218, 0.5);
-            box-shadow: 0px 0px 40px 10px rgba(155, 176, 218, 0.25);
-            
-        }
-        .title{
-            text-align: center;
-            text-transform: uppercase;
-            color: $second_color;
-        }
-    }
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 90%;
+  height: 550px;
+  margin-top: calc($big_margin * 4);
+  margin-bottom: 100px;
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
     .content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        position: absolute;
-        width: auto;
-        height: auto;
-        left: 800px;
-        margin-top: 50px;
-        .info {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 987px;
-            height: auto;
-            color: $white_color;
-            &__text {
-                font-family: $second_font;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 31px;
-            }
-            &__comment {
-                font-family: $second_font;
-                font-style: normal;
-                font-weight: 400;
-                font-size: $small_font_size;
-                line-height: 31px;
-            }
-        }
-        .social {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-end;
-            gap: 31px;
-            width: auto;
-            height: 50px;
-            margin-top: 50px;
-            
-        }
-        
+      .social {
+        justify-content: flex-start;
+      }
     }
+  }
+  .avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+    height: 100%;
+    img {
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      border: $border_width solid $white_color;
+      box-shadow: 0px 0px 40px 10px rgba($color: $white_color, $alpha: 0.2);
+    }
+    .title {
+      text-align: center;
+      text-transform: uppercase;
+      .span_name {
+        font-weight: bold;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 60%;
+    height: 100%;
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      height: 90%;
+      &__text {
+        font-weight: 600;
+        font-size: $big_font_size;
+        line-height: 28px;
+        text-indent: $margin;
+        text-align: justify;
+      }
+      &__comment {
+        font-weight: 400;
+        font-style: italic;
+        font-size: $medium_font_size;
+        text-indent: $margin;
+        line-height: 28px;
+        text-align: justify;
+      }
+    }
+    .social {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      height: 10%;
+      gap: 50px;
+    }
+  }
 }
