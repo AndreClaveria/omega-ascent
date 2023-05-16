@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import style from './index.module.scss';
-import Image from '@/components/UI/Logo';
+
+import ImageStyle from '@/components/UI/Logo';
 import Button from '@/components/UI/Button';
+import Market from '@/components/partials/Market';
+import Chart from '@/components/partials/Chart';
+
 import Logo from 'p/img/white/logo_omega_ascent_white.svg';
 import Twitter from 'p/img/reseaux-icons/twitter.svg';
 import Instagram from 'p/img/reseaux-icons/instagram.svg';
 import Github from 'p/img/reseaux-icons/github.svg';
 import Telegram from 'p/img/reseaux-icons/send.svg';
 import Lol from 'p/img/reseaux-icons/Lol_Logo.svg';
-import Market from '@/components/partials/Market';
-import Chart from '@/components/partials/Chart';
 
 const Index = (props) => {
   const [hasDelayPassed, setDelayPassed] = useState(false);
@@ -48,31 +50,31 @@ const Index = (props) => {
             </div>
 
             <div className={style.social_blank}>
-              <Image
+              <ImageStyle
                 src={Logo}
                 className={style.logo_a}
                 width={40}
                 alt="Logo_Ascent"
               />
-              <Image
+              <ImageStyle
                 src={Twitter}
                 className={style.logo_a}
                 width={24}
                 alt="Twitter"
               />
-              <Image
+              <ImageStyle
                 src={Instagram}
                 className={style.logo_a}
                 width={24}
                 alt="Instagram"
               />
-              <Image
+              <ImageStyle
                 src={Github}
                 className={style.logo_a}
                 width={24}
                 alt="Github"
               />
-              <Image
+              <ImageStyle
                 src={Telegram}
                 className={style.logo_a}
                 width={24}
@@ -83,7 +85,7 @@ const Index = (props) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <ImageStyle
                   src={Lol}
                   className={style.logo_a}
                   width={24}
@@ -131,7 +133,7 @@ const Index = (props) => {
               <p className={`p p_small ${style.copy_title}`}>
                 2023 - Crypto course in real time
               </p>
-              <p className={`p p_small ${style.copy_title}`}>
+              <p className={`p p_small ${style.copy_title} ${style.copyright}`}>
                 Copyright - © Omega Ascent
               </p>
             </div>
