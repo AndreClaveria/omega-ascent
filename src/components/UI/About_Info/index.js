@@ -33,11 +33,21 @@ const Index = (props) => {
           </div>
         </div>
         <div className={style.social}>
-          <Image src={LinkedIn.src} alt="linkedin" width={30} height={30} />
-          <Image src={Twitter.src} alt="twitter" width={30} height={30} />
-          <Image src={Instagram.src} alt="instagram" width={30} height={30} />
-          <Image src={Github.src} alt="github" width={30} height={30} />
-          <Image src={Twitch.src} alt="github" width={30} height={30} />
+          <a href={props.linkedin} target="_blank" rel="noopener noreferrer">
+            <Image src={LinkedIn.src} alt="linkedin" width={30} height={30} />
+          </a>
+          <a href={props.twitter} target="_blank" rel="noopener noreferrer">
+            <Image src={Twitter.src} alt="twitter" width={30} height={30} />
+          </a>
+          <a href={props.instagram} target="_blank" rel="noopener noreferrer">
+            <Image src={Instagram.src} alt="instagram" width={30} height={30} />
+          </a>
+          <a href={props.github} target="_blank" rel="noopener noreferrer">
+            <Image src={Github.src} alt="github" width={30} height={30} />
+          </a>
+          <a href={props.twitch} target="_blank" rel="noopener noreferrer">
+            <Image src={Twitch.src} alt="github" width={30} height={30} />
+          </a>
         </div>
       </div>
     </div>
