@@ -9,4 +9,103 @@
 .buy_page {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .select_2,
+  .select{
+    width: 100px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $first_color;
+    padding: $small_margin;
+    border-radius: $border_radius;
+    cursor: pointer;
+    .chevron {
+      transform: rotate(90deg);
+    }
+    .image_cont {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      background-color: $black_color;
+      border-radius: 50%;
+    }
+  }
+  .select {
+    position: absolute;
+    left: 68%;
+    bottom: 55%;
+    z-index: 3;
+  }
+  .select_2 {
+    position: absolute;
+    left: 68%;
+    top: 55%;
+    z-index: 3;
+  }
+  .buy_card {
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $big_margin;
+    background-color: rgba($color: $first_color, $alpha: 0.4);
+    border-left: solid $big_border_width $first_color;
+    border-right: solid $big_border_width $first_color;
+    border-radius: $big_border_radius;
+    .change_cont {
+      width: 90%;
+      text-align: left;
+      margin-top: $small_margin;
+    }
+    button {
+      margin-bottom: $margin;
+      z-index: 4;
+    }
+    .poke_cont {
+      height: 414px;
+      width: 418px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-bottom: $small_margin;
+      .poke_top {
+        position: absolute;
+        top: -4%;
+        left: 50%;
+        transform: translate(-50%, 2%);
+      }
+      .poke_mid {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        background-color: $white_color;
+        border-radius: 50%;
+        align-items: center;
+        .arrow_cont {
+          width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          background-color: $black_color;
+          border-radius: 50%;
+        }
+      }
+      .poke_down {
+        position: absolute;
+        bottom: -2%;
+        left: 50%;
+        transform: translate(-50%, 2%);
+      }
+    }
+  }
 }
