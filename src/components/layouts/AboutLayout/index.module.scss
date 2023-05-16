@@ -1,4 +1,4 @@
- @import '@/styles/variable.scss';
+@import '@/styles/variable.scss';
 
 // // ------------------------------+
 // //
@@ -7,13 +7,18 @@
 // // ------------------------------+
 
 .global_cont {
-   width: 100vw;
-   min-height: 100vh;
-   background: radial-gradient(
-     ellipse at bottom,
-     $first_color 0%,
-     $black_color 100%   );
-   overflow-x: hidden;
-   position: relative;
- }
-
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 4;
+  // background: radial-gradient(
+  // ellipse at bottom,
+  // $first_color 0%,
+  // $black_color 100%   );
+  overflow-x: hidden;
+  position: relative;
+  .canva_cont {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+}
