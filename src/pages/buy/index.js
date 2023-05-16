@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import style from './index.module.scss';
+
 import ImageStyle from '@/components/UI/Logo';
+import Button from '@/components/UI/Button';
+
 import Logo_OA from 'p/img/white/logo_omega_ascent_white.svg';
 import PokeTop from 'p/img/pokeball/poketop.svg';
 import Arrow_White from 'p/img/arrow/arrow_white.svg';
 import PokeDown from 'p/img/pokeball/pokedown.svg';
-import Button from '@/components/UI/Button';
 
 const Index = () => {
   const [captchaOpen, setCaptchaOpen] = useState(false);

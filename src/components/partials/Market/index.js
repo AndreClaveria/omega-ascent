@@ -1,10 +1,12 @@
-import style from './index.module.scss';
-import useAxios from '@/hooks/useAxios';
-import Logo from 'p/img/logo_omega_ascent.svg';
 import { useEffect } from 'react';
+import style from './index.module.scss';
+
+import useAxios from '@/hooks/useAxios';
+import ImageStyle from '@/components/UI/Logo';
+
+import Logo from 'p/img/logo_omega_ascent.svg';
 import Up from 'p/img/arrow/arrow_up_green.svg';
 import Down from 'p/img/arrow/arrow_down_red.svg';
-import Image from '@/components/UI/Logo';
 
 const Index = () => {
   const { response } = useAxios(
@@ -30,13 +32,13 @@ const Index = () => {
         <tbody>
           <tr key={crypto.id}>
             <td>
-              <Image src={Logo} alt="omegaascent" width="32" height="32" />
+              <ImageStyle src={Logo} alt="omegaascent" width="32" height="32" />
             </td>
             <td>Omega Ascent</td>
             <td> 478015 </td>
             <td>
               <div className={style.crypto_price}>
-                <Image src={Up} alt="up" />
+                <ImageStyle src={Up} alt="up" />
                 3.141592
               </div>
             </td>
@@ -58,9 +60,9 @@ const Index = () => {
                 <td>
                   <div className={style.crypto_price}>
                     {crypto.price_change_percentage_24h < 0 ? (
-                      <Image src={Down} alt="down" />
+                      <ImageStyle src={Down} alt="down" />
                     ) : (
-                      <Image src={Up} alt="up" />
+                      <ImageStyle src={Up} alt="up" />
                     )}
                     {crypto.price_change_percentage_24h}
                   </div>

@@ -12,7 +12,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .select {
+  .select_2,
+  .select{
     width: 100px;
     height: 20px;
     display: flex;
@@ -21,50 +22,31 @@
     background-color: $first_color;
     padding: $small_margin;
     border-radius: $border_radius;
+    cursor: pointer;
+    .chevron {
+      transform: rotate(90deg);
+    }
+    .image_cont {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      background-color: $black_color;
+      border-radius: 50%;
+    }
+  }
+  .select {
     position: absolute;
     left: 68%;
     bottom: 55%;
     z-index: 3;
-    
-    .chevron {
-      transform: rotate(90deg);
-    }
-    .image_cont {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 32px;
-      height: 32px;
-      background-color: $black_color;
-      border-radius: 50%;
-
-    }
   }
   .select_2 {
-    width: 100px;
-    height: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $first_color;
-    padding: $small_margin;
-    border-radius: $border_radius;
     position: absolute;
     left: 68%;
     top: 55%;
     z-index: 3;
-    .chevron {
-      transform: rotate(90deg);
-    }
-    .image_cont {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 32px;
-      height: 32px;
-      background-color: $black_color;
-      border-radius: 50%;
-    }
   }
   .buy_card {
     height: 600px;
@@ -85,6 +67,7 @@
     }
     button {
       margin-bottom: $margin;
+      z-index: 4;
     }
     .poke_cont {
       height: 414px;
@@ -124,13 +107,5 @@
         transform: translate(-50%, 2%);
       }
     }
-    // Poké cont taille fixe highfixe, centré div mid, position relative
-    // Select et S2 à reproduire
-    // img cont background noir +centré disfle
-    //chevron rotation bas + margin léger
-    // button margin bas (var.scss)
-    // arrow padding et background = card
-
-    // alt shift f
   }
 }
