@@ -67,12 +67,13 @@
     }
   }
   .buy_card {
-    height: 60%;
-    width: 28%;
+    height: 600px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-top: $big_margin;
     background-color: rgba($color: $first_color, $alpha: 0.4);
     border-left: solid $big_border_width $first_color;
     border-right: solid $big_border_width $first_color;
