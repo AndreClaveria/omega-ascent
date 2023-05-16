@@ -8,9 +8,10 @@
 
 .modal_page {
   transition: all $transition_long ease-in-out;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  overflow: hidden;
   background: rgba($color: $black_color, $alpha: 0);
   width: 100vw;
   height: 100vh;
@@ -37,6 +38,7 @@
       justify-content: space-between;
       align-items: center;
       overflow: hidden;
+
       .close_modal {
         width: 60px;
         height: 60px;
@@ -46,19 +48,29 @@
         border-radius: $border_radius;
         background: rgba($color: $black_color, $alpha: 0.4);
         cursor: pointer;
+        transition: transform $transition_long_long;
+        margin-top: $small_margin;
+        &:hover {
+          font-weight: bold;
+          transform: rotate(180deg);
+        }
       }
       .social_network {
         width: 80%;
 
-        height: 70%;
+        height: 90%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
       }
       .social_blank {
+        border-top: $border_width solid $white_color;
         height: 70%;
-
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
         img {
           margin-top: $margin;
         }
@@ -71,12 +83,11 @@
         justify-content: center;
         align-items: center;
 
-        border-bottom: $border_width solid $white_color;
         .vertical_text {
           transform: rotate(90deg);
           margin-bottom: $big_margin;
-          color: white;
-          font-size: $big_font_size; /* adjust the font size as needed */
+          color: $white_color;
+          font-size: $medium_font_size;
           font-family: $first_font;
         }
       }
@@ -126,15 +137,29 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             .title {
+              cursor: pointer;
               color: $black_color;
               font-weight: bold;
               transition: all $transition;
               &:hover,
               &.active {
                 position: relative;
+
                 span {
-                  color: rgba($color: $first_color, $alpha: 2);
+                  color: rgba($first_color, 0.8);
+                  line-height: 1.2;
+
+                  &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -2px; /* Adjust the value to position the underline */
+                    left: 0;
+                    width: 100%;
+                    height: 1px; /* Adjust the height of the underline */
+                    background-color: rgba($first_color, 0.8);
+                  }
                 }
               }
             }
@@ -150,6 +175,7 @@
           border-top: $border_width solid $black_color;
           .copy_title {
             color: $black_color;
+            margin-bottom: $margin;
           }
         }
       }
@@ -169,13 +195,25 @@
   }
   .modal_cont {
     &.open {
+      transition: transform $transition_long;
       transform: translateX(0);
     }
   }
 }
 
-// ------------------------------+
-//
-//          HOVER / ACTIVE
-//
-// ------------------------------+
+.left_modal {
+  transition: background-color $transition_logo_nav_bar;
+  background-color: transparent;
+  &.open {
+    background-color: $first_color;
+  }
+}
+
+.right_modal {
+  transition: transform $transition_logo_nav_bar;
+  transform: translateX(100%);
+
+  &.open {
+    transform: translateX(0);
+  }
+}
