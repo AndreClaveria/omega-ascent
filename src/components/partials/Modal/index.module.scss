@@ -11,13 +11,15 @@
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   overflow: hidden;
   background: rgba($color: $black_color, $alpha: 0);
   width: 100vw;
   height: 100vh;
   z-index: 10;
   .modal_cont {
-    position: fixed;
+    position: absolute;
     top: 2%;
     right: 0;
     height: 96%;
@@ -192,7 +194,7 @@
 
 .modal_page {
   &.open {
-    background: rgba($color: $black_color, $alpha: 0.8);
+    background: rgba($color: $black_color, $alpha: 0.9);
   }
   .modal_cont {
     &.open {
