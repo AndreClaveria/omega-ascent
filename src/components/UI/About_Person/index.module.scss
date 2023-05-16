@@ -1,30 +1,37 @@
 @import '@/styles/variable.scss';
+
+// ------------------------------+
+//
+//         ABOUT PAGE
+//
+// ------------------------------+
+
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    //justify-content: center;
-    padding: 0px;
-    gap: 40px;
-    width: 391px;
-    height: 487px;
-    .person {
-        box-sizing: border-box;
-        width: 300px;
-        height: 300px;
-        border: 1px solid rgba(155, 176, 218, 0.5);
-        box-shadow: 0px 0px 40px 10px rgba(155, 176, 218, 0.25);
-        border-radius: 100%;
-        border: 1px solid white;
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 100%;
-        }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: $margin;
+  width: 400px;
+  height: 400px;
+  .person {
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 40px 10px rgba($color: $white_color, $alpha: 0.2);
+    border-radius: 50%;
+    border: $border_width solid $white_color;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
     }
-    .name {
-        text-align: center;
-        text-transform: uppercase;
-        color: $second_color
+  }
+  .name {
+    text-align: center;
+    text-transform: uppercase;
+    .span_name {
+      font-weight: bold;
     }
+  }
 }
