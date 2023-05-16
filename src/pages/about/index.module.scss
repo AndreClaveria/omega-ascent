@@ -67,6 +67,7 @@
 .about_page_scroll {
   width: 100%;
   min-height: 100vh;
+  z-index: 8;
   overflow-x: hidden;
   display: flex;
   align-items: center;
