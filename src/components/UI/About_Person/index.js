@@ -1,14 +1,14 @@
-/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import style from './index.module.scss';
 import Image from 'next/image';
 
-//import Avatar from '../../../../public/img/about_page/user-1.png';
-//import Title from '@/components/UI/Title';
-
 const Index = (props) => {
+  function handleSetPerso() {
+    props.setIdPerso(props.idPerso);
+  }
+
   return (
-    <div className={style.container}>
+    <div className={style.container} onClick={handleSetPerso}>
       <div className={style.person}>
         <Image src={props.imagesrc} alt="" />
       </div>

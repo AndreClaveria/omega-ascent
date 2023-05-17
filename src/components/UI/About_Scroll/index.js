@@ -12,6 +12,7 @@ const Index = () => {
   return (
     <div className={style.container}>
       <Info
+        id="perso1"
         imagesrc={Avatar1}
         title="Florian Moracchini"
         description="Lorem ipsum dolor sit amet consectetur. At lacus fringilla
@@ -32,6 +33,7 @@ const Index = () => {
       />
 
       <Info
+        id="perso2"
         imagesrc={Avatar2}
         title="Yvan Daryl Nemeck"
         description="Lorem ipsum dolor sit amet consectetur. At lacus fringilla
@@ -52,6 +54,7 @@ const Index = () => {
       />
 
       <Info
+        id="perso3"
         imagesrc={Avatar3}
         title="Ethan Canoine"
         description="Lorem ipsum dolor sit amet consectetur. At lacus fringilla
@@ -74,6 +77,7 @@ const Index = () => {
       />
 
       <Info
+        id="perso4"
         imagesrc={Avatar4}
         title="André Claveria"
         description="Ladies and gentlemen, esteemed colleagues and technology enthusiasts, 
