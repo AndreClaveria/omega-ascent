@@ -14,27 +14,26 @@ import Modal from '@/components/partials/Modal';
 const Index = () => {
   const router = useRouter();
 
-  const [link, setLink] = useState(router.pathname);
+  const [link, setLink] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
-    if ((link == '/home')) {
+    if (router.asPath == '/home') {
       setLink('/home');
     }
-    if ((link == '/home#section1')) {
+    if (router.asPath == '/home#section1') {
       setLink('/home#section1');
     }
-    if ((link == '/home#section2')) {
+    if (router.asPath == '/home#section2') {
       setLink('/home#section2');
     }
-  }, [link]);
+  }, [router]);
 
   function handleOpenModal() {
     setModalOpen(true);
   }
   function handleLaunch() {
     console.log('Launch button clicked!');
-    // Add your logic for launching here
   }
 
   function handleOpenBuyWindow() {
@@ -44,15 +43,12 @@ const Index = () => {
     router.push('/about');
   }
   function handleOpenHomeWindow() {
-    setLink('/home');
     router.push('/home');
   }
   function handleOpenHomeWindowSection1() {
-    setLink('/home#section1');
     router.push('/home#section1');
   }
   function handleOpenHomeWindowSection2() {
-    setLink('/home#section2');
     router.push('/home#section2');
   }
   return (
@@ -84,7 +80,7 @@ const Index = () => {
               <li
                 id="intro_link"
                 className={style.nav_bar_li}
-                onClick={handleOpenHomeWindow}
+                onClick={() => handleOpenHomeWindow()}
               >
                 <div
                   className={`${style.span_link} ${
@@ -101,14 +97,11 @@ const Index = () => {
               <li
                 id="section1_link"
                 className={style.nav_bar_li}
-                onClick={handleOpenHomeWindowSection1}
+                onClick={() => handleOpenHomeWindowSection1()}
               >
                 <div
                   className={`${style.span_link} ${
-                    link === '/home#section1' &&
-                    router.asPath.includes('#section1')
-                      ? style.active
-                      : ''
+                    link === '/home#section1' ? style.active : ''
                   }`}
                 >
                   <span className="span span_light_small">02</span>
@@ -121,7 +114,7 @@ const Index = () => {
               <li
                 id="section2_link"
                 className={style.nav_bar_li}
-                onClick={handleOpenHomeWindowSection2}
+                onClick={() => handleOpenHomeWindowSection2()}
               >
                 <div
                   className={`${style.span_link} ${
@@ -138,7 +131,7 @@ const Index = () => {
               <li
                 id="about_link"
                 className={style.nav_bar_li}
-                onClick={handleOpenAboutWindow}
+                onClick={() => handleOpenAboutWindow()}
               >
                 <div
                   className={`${style.span_link} ${

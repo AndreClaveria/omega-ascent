@@ -13,7 +13,7 @@ const Section1Bis = () => {
       if (scrollPosition >= targetPosition) {
         const timer = setTimeout(() => {
           setAppear(true);
-        }, 800);
+        }, 1400);
 
         return () => clearTimeout(timer);
       }

@@ -57,6 +57,7 @@
         gap: min(3vw, 55px);
         list-style: none;
         .nav_bar_li {
+          text-decoration: none;
           cursor: pointer;
           .span_link {
             position: relative;
