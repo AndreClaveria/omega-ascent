@@ -9,7 +9,14 @@
 .global_cont {
   width: 100vw;
   height: 100vh;
-  background-color: $black_color;
+  background: radial-gradient(
+    circle,
+    $second_color 10%,
+    $black_color 30%,
+    $black_color 40%,
+    $first_color 60%,
+    $black_color 70%
+  );
   overflow: hidden;
   position: relative;
 }

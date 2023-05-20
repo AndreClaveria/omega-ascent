@@ -15,20 +15,22 @@ const Index = (props) => {
   const layoutBotClass = isHome ? style.layout_bot : style.layout_single_bot;
 
   useEffect(() => {
-    function handleScroll() {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      if (scrollTop === 0) {
-        setOpa(false);
-      } else {
-        setOpa(true);
+    if (isHome) {
+      function handleScroll() {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop === 0) {
+          setOpa(false);
+        } else {
+          setOpa(true);
+        }
       }
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
     }
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  }, [isHome]);
   return (
     <div className={layoutBotClass}>
       {isHome && (

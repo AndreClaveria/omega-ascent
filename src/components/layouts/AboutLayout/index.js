@@ -6,6 +6,10 @@ import Header from '@/components/partials/Header';
 import * as THREE from 'three';
 import gsap from 'gsap';
 
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
+import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass';
+
 const Index = ({ children }) => {
   useEffect(() => {
     const canvasCont = document.querySelector('#canvasCont');
@@ -29,36 +33,48 @@ const Index = ({ children }) => {
     renderer.setPixelRatio(window.devicePixelRatio);
 
     // Stars
-    const starGeometry = new THREE.BufferGeometry();
-    const starMaterial = new THREE.PointsMaterial({
-      color: 0xffffff,
-    });
-    const starMaterial2 = new THREE.PointsMaterial({
-      color: 0x183d8a,
-    });
-    const starMaterial3 = new THREE.PointsMaterial({
-      color: 0x9bb0da,
-    });
+    const createStarGeometry = (count, rangeX, rangeY, rangeZ) => {
+      const starGeometry = new THREE.BufferGeometry();
+      const starVertices = [];
 
-    const starVertices = [];
-    for (let index = 0; index < 2000; index++) {
-      const x = (Math.random() - 0.5) * 2000;
-      const y = (Math.random() - 0.5) * 2000;
-      const z = -Math.random() * 1000;
-      starVertices.push(x, y, z);
-    }
-    starGeometry.setAttribute(
-      'position',
-      new THREE.Float32BufferAttribute(starVertices, 3)
-    );
-    const stars = new THREE.Points(starGeometry, starMaterial);
-    const stars2 = new THREE.Points(starGeometry, starMaterial2);
-    const stars3 = new THREE.Points(starGeometry, starMaterial3);
+      for (let index = 0; index < count; index++) {
+        const x = (Math.random() - 0.5) * rangeX;
+        const y = (Math.random() - 0.5) * rangeY;
+        const z = -Math.random() * rangeZ;
+        starVertices.push(x, y, z);
+      }
+
+      starGeometry.setAttribute(
+        'position',
+        new THREE.Float32BufferAttribute(starVertices, 3)
+      );
+
+      return starGeometry;
+    };
+
+    const createStarMaterial = (color) => {
+      return new THREE.PointsMaterial({ color });
+    };
+
+    const createStars = (geometry, material) => {
+      return new THREE.Points(geometry, material);
+    };
+
+    const starGeometry = createStarGeometry(1200, 1600, 1600, 1000);
+    const starGeometry2 = createStarGeometry(1200, 1600, 1600, 1000);
+    const starGeometry3 = createStarGeometry(1200, 1600, 1600, 1000);
+
+    const starMaterial = createStarMaterial('ghostwhite');
+    const starMaterial2 = createStarMaterial('#183d8a');
+    const starMaterial3 = createStarMaterial('#9bb0da');
+
+    const stars = createStars(starGeometry, starMaterial);
+    const stars2 = createStars(starGeometry2, starMaterial2);
+    const stars3 = createStars(starGeometry3, starMaterial3);
 
     const group = new THREE.Group();
-    group.add(stars);
-    group.add(stars2);
-    group.add(stars3);
+
+    group.add(stars, stars2, stars3);
     scene.add(group);
 
     // HOVER get mouse position
@@ -70,11 +86,22 @@ const Index = ({ children }) => {
       mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
       mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
     });
+
+    // Post-processing
+    const composer = new EffectComposer(renderer);
+    const renderPass = new RenderPass(scene, camera);
+    composer.addPass(renderPass);
+
+    const bloomPass = new UnrealBloomPass();
+    bloomPass.strength = 20;
+    bloomPass.radius = 1;
+    bloomPass.threshold = 0.1;
+    composer.addPass(bloomPass);
+
     // Render the scene
     const animate = () => {
       requestAnimationFrame(animate);
-      renderer.render(scene, camera);
-      group.rotation.y += 0.002;
+      composer.render();
       gsap.to(group.rotation, {
         x: -mouse.y * 0.3,
         y: mouse.x * 0.5,

@@ -9,8 +9,13 @@
 .global_cont {
   width: 100vw;
   min-height: 100vh;
-  background-color: $black_color;
-  // background: rgba($color: $black_color, $alpha: 0.8);
   overflow-x: hidden;
   position: relative;
+  .canva_cont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
 }

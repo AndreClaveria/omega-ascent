@@ -12,8 +12,12 @@
   left: 0;
   height: 100vh;
   width: 100%;
-  z-index: 10;
-  background-color: $black_color;
+  z-index: 12;
+  background: radial-gradient(
+    circle,
+    $black_color 90%,
+    $first_color 100%,
+  );
   display: flex;
   align-items: center;
   justify-content: center;
