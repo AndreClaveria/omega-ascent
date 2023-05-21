@@ -6,7 +6,7 @@ function stopServer() {
   console.log('Server is not running');
 }
 
-const condition = 'hello world';
+const condition = 'hello wrld';
 
 if (condition === 'hello world') {
   startServer();
