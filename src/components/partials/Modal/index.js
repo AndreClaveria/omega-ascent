@@ -84,6 +84,7 @@ const Index = (props) => {
                 href="https://www.leagueofgraphs.com/summoner/euw/hikkary#championsData-all-queues"
                 target="_blank"
                 rel="noopener noreferrer"
+                className={style.lol}
               >
                 <ImageStyle
                   src={Lol}
