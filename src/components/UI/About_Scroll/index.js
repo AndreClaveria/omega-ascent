@@ -33,20 +33,17 @@ const Index = () => {
       <Info
         imagesrc={Avatar2}
         title="Yvan Daryl Nemeck"
-        description="Lorem ipsum dolor sit amet consectetur. At lacus fringilla
-         imperdiet tristique dignissim maecenas mauris gravida.
-            Adipiscing elit vestibulum ultricies ante lectus. Lorem ipsum dolor sit amet consectetur. At lacus fringilla
-            imperdiet tristique dignissim maecenas mauris gravida.
-            Adipiscing elit vestibulum ultricies ante lectus. Lorem ipsum dolor sit amet consectetur. At lacus fringilla
-            imperdiet tristique dignissim maecenas mauris gravida.
-            Adipiscing elit vestibulum ultricies ante lectus. Lorem ipsum dolor sit amet consectetur. At lacus fringilla
-            imperdiet tristique dignissim maecenas mauris gravida.
-            Adipiscing elit vestibulum ultricies ante lectus. "
-        comment="Lorem ipsum dolor sit amet consectetur. At lacus fringilla
-            imperdiet tristique dignissim maecenas mauris gravida.
-             Adipiscing elit vestibulum ultricies ante lectus. Lorem ipsum dolor sit amet consectetur. At lacus fringilla
-            imperdiet tristique dignissim maecenas mauris gravida.
-            Adipiscing elit vestibulum ultricies ante lectus. "
+        description="I'm Yvan Daryl Ndenga Nemeck, a front-end web developer 
+        and portrait artist. I specialize in creating visually appealing and 
+        user-friendly websites using HTML, CSS, JavaScript, and front-end 
+        frameworks. Beyond coding, I have a passion for capturing the essence
+         of individuals through portrait drawings. With attention to detail 
+         and a creative eye, I aim to create lifelike and emotive portrayals.
+          I'm dedicated to continuous learning and staying updated with industry
+           trends. Collaborative and professional, I work closely with clients 
+           to transform their goals into captivating digital experiences. Let's 
+        discuss how we can bring your ideas to life."
+        comment="It's all about the mood, Let's create our own world in our mood"
         github="https://github.com/DarylNyd"
       />
 
