@@ -30,11 +30,14 @@ const Index = () => {
           <p className="p p_medium">
             This Website is only an{' '}
             <span className="span span_medium">”Experimental Website”</span>
-            for a <span className="span span_medium">Visual Presentation</span> and <span className="span span_medium">School Project</span>
+            for a <span className="span span_medium">
+              Visual Presentation
+            </span>{' '}
+            and <span className="span span_medium">School Project</span>
           </p>
           <p className="p p_medium">
             The <span className="span span_medium">“Cryptocurrency</span>{' '}
-            does&apos;t exist, otherwise it&apos;s not us
+            doesn&apos;t exist, otherwise it&apos;s not us
           </p>
           <p className="p p_medium">
             We hope you will appreciate this travel bye ^^
