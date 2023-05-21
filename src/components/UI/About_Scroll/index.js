@@ -50,20 +50,15 @@ const Index = () => {
       <Info
         imagesrc={Avatar3}
         title="Ethan Canoine"
-        description="Lorem ipsum dolor sit amet consectetur. At lacus fringilla
-            imperdiet tristique dignissim maecenas mauris gravida.
-            Adipiscing elit vestibulum ultricies ante lectus. Lorem ipsum dolor sit amet consectetur. At lacus fringilla
-            imperdiet tristique dignissim maecenas mauris gravida.
-            Adipiscing elit vestibulum ultricies ante lectus. Lorem ipsum dolor sit amet consectetur. At lacus fringilla
-            imperdiet tristique dignissim maecenas mauris gravida.
-            Adipiscing elit vestibulum ultricies ante lectus. Lorem ipsum dolor sit amet consectetur. At lacus fringilla
-            imperdiet tristique dignissim maecenas mauris gravida.
-            Adipiscing elit vestibulum ultricies ante lectus. "
-        comment="Lorem ipsum dolor sit amet consectetur. At lacus fringilla
-            imperdiet tristique dignissim maecenas mauris gravida.
-            Adipiscing elit vestibulum ultricies ante lectus. Lorem ipsum dolor sit amet consectetur. At lacus fringilla
-            imperdiet tristique dignissim maecenas mauris gravida.
-            Adipiscing elit vestibulum ultricies ante lectus. "
+        description="Heya, I'm Ethan CANOINE, also known by the pseudonym Zwodash. I'm a Front-end developer who excels in 
+        HTML, CSS, and JavaScript, I really love being a Dev-Front because that 
+        let me express my creativity like I want to and it make me feel like kinda free 
+        and it challenge me to give the best of myself to make my website better 
+        than my most recent . Besides web development, I have a passion of many things 
+        coming from Japan like Traditional Temple, Mangas, etc... I like to practice basketball, 
+        and I love video games (Mainly Pokémon). Additionally, I share my passion by streaming sessions 
+        every Sunday on my Twitch channel. "
+        comment="Feur"
         twitch="https://www.twitch.tv/zwodash"
         twitter="https://twitter.com/Zwodash"
         github="https://github.com/Zwodash"
