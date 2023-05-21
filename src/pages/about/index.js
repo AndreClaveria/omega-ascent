@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import style from './index.module.scss';
+import { useRouter } from 'next/router';
 
 import AvatarInfo from '@/components/UI/About_Scroll';
 import Person from '@/components/UI/About_Person';
@@ -12,6 +13,15 @@ import Avatar4 from 'p/img/about_page/tsuya.jpg';
 import Arrow from 'p/img/arrow/arrow.svg';
 
 const Index = () => {
+  const router = useRouter();
+  const [idPerso, setIdPerso] = useState('');
+
+  useEffect(() => {
+    if (idPerso !== '') {
+      // router.push('/about#perso' + idPerso);
+    }
+  }, [idPerso, router]);
+
   return (
     <>
       <div className={style.about_page_intro}>
@@ -22,13 +32,33 @@ const Index = () => {
             </p>
           </div>
           <div className={style.team_info}>
-            <Person title="Florian Moracchini" imagesrc={Avatar1} />
+            <Person
+              title="Florian Moracchini"
+              imagesrc={Avatar1}
+              setIdPerso={setIdPerso}
+              idPerso="1"
+            />
 
-            <Person title="Yvan Daryl Nemeck" imagesrc={Avatar2} />
+            <Person
+              title="Yvan Daryl Nemeck"
+              imagesrc={Avatar2}
+              setIdPerso={setIdPerso}
+              idPerso="2"
+            />
 
-            <Person title="Ethan Canoine" imagesrc={Avatar3} />
+            <Person
+              title="Ethan Canoine"
+              imagesrc={Avatar3}
+              setIdPerso={setIdPerso}
+              idPerso="3"
+            />
 
-            <Person title="André Claveria" imagesrc={Avatar4} />
+            <Person
+              title="André Claveria"
+              imagesrc={Avatar4}
+              setIdPerso={setIdPerso}
+              idPerso="4"
+            />
           </div>
           <div className={style.arrow_cont}>
             <ImageStyle
