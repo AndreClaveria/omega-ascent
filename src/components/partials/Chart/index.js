@@ -2,12 +2,12 @@ import style from './index.module.scss';
 
 import ImageStyle from '@/components/UI/Logo';
 
-import Logo from 'p/img/logo_omega_ascent.svg';
+import Graphic from 'p/img/chart/graphic.png';
 
 const Index = () => {
   return (
     <div className={style.table_cont}>
-      <ImageStyle src={Logo} width={100} alt="ok" />
+      <ImageStyle src={Graphic} width={750} alt="ok" />
     </div>
   );
 };
