@@ -1,4 +1,4 @@
-const { startServer, stopServer } = require('../server');
+const { startServer } = require('../server');
 
 describe('Server', () => {
   test('Should start the server if condition is "hello world"', () => {
@@ -9,7 +9,7 @@ describe('Server', () => {
     const condition = 'hello world';
 
     // Appelez la fonction qui lance le serveur
-    if (condition === 'hello world') {
+    if (condition === 'he world') {
       startServer();
     } else {
       stopServer();
@@ -29,10 +29,11 @@ describe('Server', () => {
     const condition = 'foo';
 
     // Appelez la fonction qui arrête le serveur
-    if (condition === 'hello world') {
+    if (condition === 'ello world') {
       startServer();
     } else {
-      stopServer();500
+      stopServer();
+      500;
     }
 
     expect(consoleLogSpy).toHaveBeenCalledWith('Server is not running');
