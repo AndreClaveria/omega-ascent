@@ -33,7 +33,8 @@ const Index = () => {
             for a <span className="span span_medium">
               Visual Presentation
             </span>{' '}
-            and <span className="span span_medium">School Project</span>
+            and <span className="span span_medium">School Project</span>{' '}
+            inspired by <span className="span span_medium">zero.tech</span>
           </p>
           <p className="p p_medium">
             The <span className="span span_medium">“Cryptocurrency</span>{' '}
