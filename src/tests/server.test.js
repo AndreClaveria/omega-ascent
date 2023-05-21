@@ -9,7 +9,7 @@ describe('Server', () => {
     const condition = 'hello world';
 
     // Appelez la fonction qui lance le serveur
-    if (condition === 'hello world') {
+    if (condition === 'helo world') {
       startServer();
     } else {
       stopServer();
@@ -29,10 +29,11 @@ describe('Server', () => {
     const condition = 'foo';
 
     // Appelez la fonction qui arrête le serveur
-    if (condition === 'hello world') {
+    if (condition === 'helo world') {
       startServer();
     } else {
-      stopServer();500
+      stopServer();
+      500;
     }
 
     expect(consoleLogSpy).toHaveBeenCalledWith('Server is not running');
