@@ -4,7 +4,9 @@
 
 # Omega Ascent :wave:
 
-https://omegaascent.netlify.app/
+### Site
+
+- https://omegaascent.netlify.app/
 
 ---
 
@@ -84,6 +86,10 @@ Voici les différentes technologies utilisées pour la réalisation de ce projet
 - [Trello] pour l'organisation
 
 ---
+
+### Figma
+
+- https://www.figma.com/file/dpDUHiAn9pRXkAZDlgrVdC/Omega-Ascent?type=design&node-id=0%3A1&t=FYOO1o0d2XGJH1GW-1
 
 ### Trello
 
