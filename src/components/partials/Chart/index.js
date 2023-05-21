@@ -7,7 +7,7 @@ import Graphic from 'p/img/chart/graphic.png';
 const Index = () => {
   return (
     <div className={style.table_cont}>
-      <ImageStyle src={Graphic} width={750} alt="ok" />
+      <ImageStyle src={Graphic}  alt="graph" />
     </div>
   );
 };

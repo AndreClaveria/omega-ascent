@@ -117,3 +117,26 @@ body {
 *::-webkit-scrollbar-thumb {
   background-color: $first_color;
 }
+
+// ------------------------------+
+//
+//         RESPONSIVE
+//
+// ------------------------------+
+
+@media (max-width: 1023px) {
+  body {
+    opacity: 1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: $black_color;
+    background-image: url('../../public/img/responsive/responsive.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    * {
+      opacity: 0;
+    }
+  }
+}
