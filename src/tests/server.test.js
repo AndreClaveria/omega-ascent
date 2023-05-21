@@ -32,7 +32,7 @@ describe('Server', () => {
     if (condition === 'hello world') {
       startServer();
     } else {
-      stopServer();
+      stopServer();500
     }
 
     expect(consoleLogSpy).toHaveBeenCalledWith('Server is not running');
