@@ -77,7 +77,7 @@ const Index = () => {
           </div>
           <div className={style.nav_bar_link_cont}>
             <ul className={style.nav_bar_ul}>
-              <li
+              <button
                 id="intro_link"
                 className={style.nav_bar_li}
                 onClick={() => handleOpenHomeWindow()}
@@ -93,8 +93,8 @@ const Index = () => {
                     <p className="p">Home</p>
                   </div>
                 </div>
-              </li>
-              <li
+              </button>
+              <button
                 id="section1_link"
                 className={style.nav_bar_li}
                 onClick={() => handleOpenHomeWindowSection1()}
@@ -110,8 +110,8 @@ const Index = () => {
                     <p className="p">Ascent</p>
                   </div>
                 </div>
-              </li>
-              <li
+              </button>
+              <button
                 id="section2_link"
                 className={style.nav_bar_li}
                 onClick={() => handleOpenHomeWindowSection2()}
@@ -127,8 +127,8 @@ const Index = () => {
                     <p className="p">Omega</p>
                   </div>
                 </div>
-              </li>
-              <li
+              </button>
+              <button
                 id="about_link"
                 className={style.nav_bar_li}
                 onClick={() => handleOpenAboutWindow()}
@@ -144,7 +144,7 @@ const Index = () => {
                     <p className="p">About</p>
                   </div>
                 </div>
-              </li>
+              </button>
             </ul>
           </div>
           <div className={style.nav_bar_button}>

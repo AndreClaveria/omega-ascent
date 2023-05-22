@@ -74,6 +74,7 @@
     padding: $small_margin;
     background: rgba($color: $black_color, $alpha: 0.4);
     border-radius: $border_radius;
+    border: none;
     cursor: pointer;
     transition: all $transition;
     .bubble_top {
@@ -102,6 +103,7 @@
       }
     }
     .bubble_bot {
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;

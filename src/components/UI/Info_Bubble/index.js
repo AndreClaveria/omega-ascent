@@ -52,7 +52,7 @@ const Index = (props) => {
           </div>
         </div>
       )}
-      <div className={style.bubble_cont} onClick={props.handleClick}>
+      <button className={style.bubble_cont} onClick={props.handleClick}>
         <div className={style.bubble_top}>
           <p className="p">Omega Ascent</p>
           <div className={style.arrow_cont}>
@@ -74,7 +74,7 @@ const Index = (props) => {
           <p className="p p_small">$100</p>
           <span className="span span_light_small">(10%)</span>
         </div>
-      </div>
+      </button>
     </div>
   );
 };

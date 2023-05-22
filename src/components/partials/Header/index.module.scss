@@ -58,6 +58,8 @@
         list-style: none;
         .nav_bar_li {
           text-decoration: none;
+          border: none;
+          background-color: transparent;
           cursor: pointer;
           .span_link {
             position: relative;

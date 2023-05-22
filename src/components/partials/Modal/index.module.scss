@@ -45,6 +45,7 @@
         width: 60px;
         height: 60px;
         display: flex;
+        border: none;
         justify-content: center;
         align-items: center;
         border-radius: $border_radius;
@@ -150,6 +151,8 @@
               color: $black_color;
               font-weight: bold;
               transition: all $transition;
+              background-color: transparent;
+              border: none;
               &:hover,
               &.active {
                 position: relative;

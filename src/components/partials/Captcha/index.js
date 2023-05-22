@@ -57,9 +57,9 @@ const Index = (props) => {
         <div className={style.wrapper}>
           <div className={style.title_cont}>
             <p className="p p_big">VERIFICATION</p>
-            <div className={style.close_modal} onClick={handleCloseCaptcha}>
+            <button className={style.close_modal} onClick={handleCloseCaptcha}>
               <p className="p p_medium">X</p>
-            </div>
+            </button>
           </div>
           <div className={style.wanted_cont}>
             <p className="p p_big">WANTED</p>
