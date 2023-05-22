@@ -44,7 +44,9 @@ const Index = () => {
            to transform their goals into captivating digital experiences. Let's 
         discuss how we can bring your ideas to life."
         comment="It's all about the mood, Let's create our own world in our mood"
+        linkedin="https://www.linkedin.com/in/yvan-daryl-ndenga-nemeck/"
         github="https://github.com/DarylNyd"
+        instagram="https://www.instagram.com/master_nyd/"
       />
 
       <Info
