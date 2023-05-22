@@ -88,11 +88,9 @@ const Index = ({ children }) => {
       const sectionMiddle = sectionTop + sectionHeight / 2;
 
       // Calculate the distance from the middle position of section1bis to the current scroll position
-      console.log(sectionMiddle);
       const distanceToMiddle = Math.abs(
         scrollPosition + windowHeight / 2 - sectionMiddle
       );
-      console.log(distanceToMiddle);
       // Set the rangeX and rangeY values based on the distance to the middle position
       let rangeX = distanceToMiddle - 50;
       let rangeY = distanceToMiddle - 50;

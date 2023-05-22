@@ -14,6 +14,11 @@ import Telegram from 'p/img/reseaux-icons/send.svg';
 import Lol from 'p/img/reseaux-icons/Lol_Logo.svg';
 
 const Index = (props) => {
+
+  function handleLaunch() {
+    console.log('Launch button clicked!');
+  }
+
   const [hasDelayPassed, setDelayPassed] = useState(false);
   const [showChart, setShowChart] = useState(false);
 
@@ -40,9 +45,9 @@ const Index = (props) => {
         <div
           className={`${style.left_modal} ${hasDelayPassed ? style.open : ''}`}
         >
-          <div className={style.close_modal} onClick={handleCloseModal}>
+          <button className={style.close_modal} onClick={handleCloseModal}>
             <p className="p p_medium">X</p>
-          </div>
+          </button>
 
           <div className={style.social_network}>
             <div className={style.community}>
@@ -106,27 +111,27 @@ const Index = (props) => {
                 type="button"
                 className="btn_primary"
                 title="JOIN NOW"
-                handleClick={() => navToHome()}
+                handleClick={() => handleLaunch()}
               />
             </div>
             <div className={style.right_middle}>
               <div className={style.onglet_title}>
-                <p
+                <button
                   className={`p p_medium ${style.title} ${
                     !showChart ? style.active : ''
                   }`}
                   onClick={() => setShowChart(false)}
                 >
                   <span>CRYPTO COURSE BOARD </span>
-                </p>
-                <p
+                </button>
+                <button
                   className={`p p_medium ${style.title} ${
                     showChart ? style.active : ''
                   }`}
                   onClick={() => setShowChart(true)}
                 >
                   <span> CRYPTO COURSE CHART </span>
-                </p>
+                </button>
               </div>
               {showChart ? <Chart /> : <Market />}
             </div>

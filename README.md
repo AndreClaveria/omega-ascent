@@ -12,7 +12,7 @@
 
 ## BUT | Informations générales :raised_eyebrow:
 
-Le but de ce projet est de faire un **"Site Web"** de présentation d'une fausse crypto monnaie (Omega Ascent) pour pouvoir faire un beau site futuriste.
+Le but de ce projet est de faire un **"Site Web"** de présentation d'une fausse crypto monnaie (Omega Ascent) pour pouvoir faire un beau site futuriste. (inspirer de zero.tech)
 
 ## Type de produits à développer
 

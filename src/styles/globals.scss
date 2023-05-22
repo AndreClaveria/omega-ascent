@@ -132,10 +132,11 @@ body {
     overflow: hidden;
     background-color: $black_color;
     background-image: url('../../public/img/responsive/responsive.png');
-    background-position: 50%;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: contain;
     * {
+      display: none;
       opacity: 0;
     }
   }

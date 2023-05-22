@@ -112,30 +112,30 @@ const Section1 = () => {
               <p className="p p_small">Ascent Meaning</p>
             </div>
             <div className={style.bubble_ascent_top_right}>
-              <p
+              <button
                 className={`p p_small_small ${style.ascent_p} ${
                   ascent ? style.active : ''
                 }`}
                 onClick={handleAscent}
               >
                 Ascension
-              </p>
-              <p
+              </button>
+              <button
                 className={`p p_small_small ${style.everest_p} ${
                   everest ? style.active : ''
                 }`}
                 onClick={handleEverest}
               >
                 Everest
-              </p>
-              <p
+              </button>
+              <button
                 className={`p p_small_small ${style.valo_p} ${
                   valo ? style.active : ''
                 }`}
                 onClick={handleValo}
               >
                 Valorant
-              </p>
+              </button>
             </div>
           </div>
           <div className={style.bubble_ascent_bot}>

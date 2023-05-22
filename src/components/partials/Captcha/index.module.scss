@@ -56,6 +56,8 @@
       .close_modal {
         cursor: pointer;
         transition: transform $transition_long_long;
+        border: none;
+        background-color: transparent;
         &:hover {
           font-weight: bold;
           transform: rotate(180deg);
