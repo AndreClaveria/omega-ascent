@@ -61,6 +61,7 @@ const Index = () => {
         and I love video games (Mainly Pokémon). Additionally, I share my passion by streaming sessions 
         every Sunday on my Twitch channel. "
         comment="Feur"
+        linkedin="https://www.linkedin.com/in/ethan-canoine-21343420a/"
         twitch="https://www.twitch.tv/zwodash"
         twitter="https://twitter.com/Zwodash"
         github="https://github.com/Zwodash"
